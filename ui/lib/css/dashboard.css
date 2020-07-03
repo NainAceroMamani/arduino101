@@ -1,0 +1,186 @@
+.chart-statistic-box .chart-container .chart-container-x:after, .chart-statistic-box .chart-container .chart-container-x:before, .chart-statistic-box:after, .chart-statistic-box:before {
+    content: " ";
+    display: table
+}
+
+.chart-statistic-box {
+    zoom: 1;
+    margin: 0 0 10px;
+    overflow: hidden
+}
+
+.chart-statistic-box .chart-txt {
+    float: left;
+    width: 250px;
+    height: 250px;
+    padding: 15px 20px;
+    background: #2f4050;
+
+    color: #fff;
+    position: relative;
+    z-index: 5
+}
+
+.chart-statistic-box .chart-txt p {
+    margin: 0
+}
+
+.chart-statistic-box .chart-txt .chart-txt-top {
+    text-align: center;
+    margin: 0 0 10px
+}
+
+.chart-statistic-box .chart-txt .chart-txt-top .number, .chart-statistic-box .chart-txt .chart-txt-top .unit {
+    vertical-align: middle
+}
+
+.chart-statistic-box .chart-txt .chart-txt-top .unit {
+    font-weight: 300;
+    font-size: 1.25rem;
+    color: #929faa;
+    margin: 0 .3em 0 0;
+    position: relative;
+    top: -.2em
+}
+
+.chart-statistic-box .chart-txt .chart-txt-top .number {
+    font-size: 2.125rem
+}
+
+.chart-statistic-box .chart-txt .chart-txt-top .caption {
+    font-weight: 600
+}
+
+.chart-statistic-box .chart-txt .color-purple {
+    color: #b982ef !important
+}
+
+.chart-statistic-box .chart-txt .tbl-data {
+    width: 100%;
+    position: absolute;
+    bottom: 15px
+}
+
+.chart-statistic-box .chart-txt .tbl-data td {
+    vertical-align: top;
+    padding: 5px 0
+}
+
+.chart-statistic-box .chart-txt .tbl-data .price {
+    white-space: nowrap;
+    width: 20px;
+    padding-right: 10px;
+    font-weight: 600
+}
+
+.chart-statistic-box .chart-container {
+    float: right;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #2196f3;
+    color: #fff;
+    margin-left: -250px
+}
+
+.chart-statistic-box .chart-container .chart-container-in {
+    margin-left: 200px;
+    position: relative
+}
+
+.chart-statistic-box .chart-container .chart-container-title {
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    z-index: 20;
+    color: #fff
+}
+
+.chart-statistic-box .chart-container .chart-container-x, .chart-statistic-box .chart-container .chart-container-y {
+    font-size: inherit;
+    text-transform: uppercase;
+
+    position: absolute;
+    z-index: 20
+}
+
+.chart-statistic-box .chart-container .chart-container-x {
+    left: 0;
+    top: 19px;
+    width: 100%;
+    text-align: center;
+    zoom: 1
+}
+
+.chart-statistic-box .chart-container .chart-container-x .item {
+    float: left;
+    width: 12.5%;
+    min-height: 5px
+}
+
+.chart-statistic-box .chart-container .chart-container-x .item:first-child, .chart-statistic-box .chart-container .chart-container-x .item:last-child {
+    width: 6%
+}
+
+.chart-statistic-box .chart-container .chart-container-y {
+    right: 22px;
+    bottom: 0;
+    text-align: right;
+    line-height: 22px
+}
+
+.chart-statistic-box .chart-container .chart-container-y .item {
+    height: 22.4px
+}
+
+.chart-statistic-box .google-visualization-tooltip {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background: 0 0 !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: 700 !important;
+    margin-left: -35px
+}
+
+@media (max-width: 1367px) {
+    .chart-statistic-box .chart-txt {
+        width: 170px
+    }
+
+    .chart-statistic-box .chart-container {
+        margin-left: -170px
+    }
+
+    .chart-statistic-box .chart-container .chart-container-in {
+        margin-left: 170px
+    }
+}
+
+@media (max-width: 767px) {
+    .chart-statistic-box .chart-txt {
+        float: none;
+        width: auto;
+        height: auto;
+        margin: 0 0 15px;
+    }
+
+    .chart-statistic-box .chart-txt .tbl-data {
+        position: static
+    }
+
+    .chart-statistic-box .chart-container {
+        float: none;
+        width: auto;
+        margin: 0
+    }
+
+    .chart-statistic-box .chart-container .chart-container-in {
+        margin: 0
+    }
+}
