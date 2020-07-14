@@ -1307,7 +1307,7 @@ CREATE TABLE `sys_users` (
 --
 
 INSERT INTO `sys_users` (`id`, `username`, `fullname`, `phonenumber`, `password`, `user_type`, `status`, `last_login`, `email`, `creationdate`, `otp`, `pin_enabled`, `pin`, `img`, `api`, `pwresetkey`, `keyexpire`) VALUES
-(1, 'admin@admin.com', 'Administrator', '', 'ibLJRKHoI8Qfk', 'Admin', 'Active', '2020-06-27 19:08:47', '', '2014-10-20 01:43:07', 'No', 'No', '$1$ZW/.uF5.$.rwCeLiguoBzYzf3waOnY1', 'gravatar', 'No', '', '0');
+(2, 'prueba@admin.com', 'Administrator', '', '$2y$12$Od7bXaiNZfNHw6s46Xal6OMpFfF7qLV6vvrWRC./qOMMCgehHwFRC', 'Admin', 'Active', '2020-06-27 19:08:47', '', '2014-10-20 01:43:07', 'No', 'No', '$1$ZW/.uF5.$.rwCeLiguoBzYzf3waOnY1', 'gravatar', 'No', '', '0');
 
 -- --------------------------------------------------------
 
