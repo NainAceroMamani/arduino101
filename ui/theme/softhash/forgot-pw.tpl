@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>{$_L['Reset Password']} - {$_title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -17,20 +17,26 @@
 
 </head>
 
-<body class="overflow-hidden light-background">
-<div class="wrapper no-navigation preload">
+<body class="light-background">
+<div class="no-navigation preload">
     <div class="sign-in-wrapper">
         <div class="sign-in-inner">
-            <div class="login-brand text-center">
+            <div class="login-brand m-bottom-xl text-center">
                 <img class="logo" src="{$app_url}sysfrm/uploads/system/logo.png" alt="Logo">
 
             </div>
-            {if isset($notify)}
+            <form class="forgot-pw m-top-lg" method="post" action="{$_url}admin/forgot-pw-post/">
+                <h3 class="text-dark m-bottom-md font-600 text-center">Restablecer su contraseña</h3>
+                <p class="text-center m-bottom-md">Recibiras un mensaje con un enlace para restablecer tu contraseña.</p>
+                {if isset($notify)}
                 {$notify}
-            {/if}
-            <form class="login" method="post" action="{$_url}admin/forgot-pw-post/">
+                {/if}
                 <div class="form-group m-bottom-md">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="{$_L['Email Address']}">
+                    <label for="username">{$_L['Email Address']}</label>
+                    <div class="form-input">
+                        <input type="text" class="form-control" id="username" name="username">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
                 </div>
 
 
@@ -40,8 +46,8 @@
                 </div>
 
                 <div class="m-top-md p-top-sm">
-                    <div class="font-12 text-center m-bottom-xs">
-                        <a href="{$_url}admin/" class="font-12">{$_L['Back To Login']}</a>
+                    <div class="font-14 text-center m-bottom-xs">
+                        <a href="{$_url}admin/" class="font-14">{$_L['Back To Login']}</a>
 
                     </div>
 
@@ -54,8 +60,10 @@
 
 
 
-<!-- Le javascript
+<!-- Javascript Code
 ================================================== -->
+<script src="{$_theme}/js/validation.js"></script>
+
 <!-- Placed at the end of the document so the pages load faster -->
 
 <!-- Jquery -->

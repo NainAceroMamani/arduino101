@@ -19,7 +19,7 @@ License: You must have a valid license purchased only from envato(the above link
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{$_title}</title>
