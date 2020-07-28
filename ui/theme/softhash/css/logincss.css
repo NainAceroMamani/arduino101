@@ -5,12 +5,6 @@
     overflow: hidden
 }
 
-
-body.light-background {
-    background-color: #f0f2f4
-}
-
-
 .wrapper {
     position: relative;
     overflow: hidden;
@@ -56,6 +50,7 @@ body.light-background {
     .sign-in-wrapper .sign-in-inner {
         width: 100%;
         min-height: auto;
+        box-shadow: none;
     }
 }
 
@@ -568,8 +563,11 @@ body {
     -webkit-font-smoothing: antialiased
 }
 
-
-
+@media (max-width: 767px) {
+    body {
+        background-color: #fff;
+    }
+}
 
 
 a {
