@@ -109,7 +109,7 @@ License: You must have a valid license purchased only from envato(the above link
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 
                                 {if $user['img'] eq 'gravatar'}
-                                    <img src="http://www.gravatar.com/avatar/{($user['username'])|md5}?s=200" class="img-circle" alt="{$user['fullname']}">
+                                    <img src="http://www.gravatar.com/avatar/{($user['username'])|md5}?s=200&d=mp" class="img-circle" alt="{$user['fullname']}">
                                 {elseif $user['img'] eq ''}
                                     <img src="{$app_url}ui/lib/imgs/default-user-avatar.png" alt="">
                                 {else}
