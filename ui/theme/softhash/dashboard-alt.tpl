@@ -1,6 +1,6 @@
 {include file="sections/header.tpl"}
 
-
+<!-- 
 {*<div class="row">*}
     {*<div class="col-lg-12">*}
         {*<div class="chart-statistic-box">*}
@@ -140,7 +140,6 @@
             </div>
 
         </div>
-        <!-- Widget-5 end-->
 
     </div>
     <div class="row" id="sort_2">
@@ -193,7 +192,7 @@
         </div>
     </div>
 
-    <!-- Row end-->
+
 
 <div class="row" id="sort_4">
 
@@ -313,7 +312,7 @@
 
 
     </div>
-
+ -->
 
 
 {include file="sections/footer.tpl"}
