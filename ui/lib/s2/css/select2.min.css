@@ -2,6 +2,7 @@
 /*! Select2 Bootstrap Theme v0.1.0-beta.3 | MIT License | github.com/select2/select2-bootstrap-theme */
 .select2-container--bootstrap {
     display: block;
+    width: 100% !important;
     /*------------------------------------*\
             #COMMON STYLES
     \*------------------------------------*/
@@ -228,8 +229,8 @@
     overflow-y: auto;
 }
 .select2-container--bootstrap .select2-selection--single {
-    height: 34px;
-    line-height: 1.428571429;
+    height: 44px;
+    line-height: 2.25;
     padding: 6px 24px 6px 12px;
     /**
      * Adjust the single Select2's dropdown arrow button appearance.
@@ -262,7 +263,7 @@
     color: #999;
 }
 .select2-container--bootstrap .select2-selection--multiple {
-    min-height: 34px;
+    min-height: 44px;
     /**
      * Make Multi Select2's choices match Bootstrap 3's default button styles.
      */
@@ -303,7 +304,7 @@
 .select2-container--bootstrap .select2-selection--multiple .select2-search--inline .select2-search__field {
     background: transparent;
     padding: 0 12px;
-    height: 32px;
+    height: 42px;
     line-height: 1.428571429;
     margin-top: 0;
     min-width: 5em;

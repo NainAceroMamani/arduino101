@@ -1,21 +1,5 @@
 <!DOCTYPE html>
-
-
-<!--
-Dynamically Auto Generated Page - Do Not Edit
-================================================================
-Software Name: iBilling - CRM, Accounting and Invoicing Software
-Version: 4.1.0
-Author: Sadia Sharmin
-Website: http://www.ibilling.io/
-Contact: sadiasharmin3139@gmail.com
-Purchase: http://codecanyon.net/item/ibilling-accounting-and-billing-software/11021678?ref=SadiaSharmin
-License: You must have a valid license purchased only from envato(the above link) in order to legally use this Software.
-========================================================================================================================
--->
-
-
-<html>
+<html lang="es">
 
 <head>
 
@@ -73,65 +57,106 @@ License: You must have a valid license purchased only from envato(the above link
 <body class="fixed-nav {if $_c['mininav']}mini-navbar{/if}">
 <section>
     <div id="wrapper">
+        <div id="sidebar" class="sidebar">
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+    
+                        {$admin_extra_nav[0]}
+                        <li {if $_sysfrm_menu eq 'dashboard'}class="active"{/if}><a href="{$_url}{$_c['redirect_url']}/"><i class="fa fa-th-large"></i> <span class="nav-label">{$_L['Dashboard']}</span></a></li>
+                        {$admin_extra_nav[1]}
+                        <li class="{if $_sysfrm_menu eq 'contacts'}active{/if}">
+                            <a href="#"><i class="icon-users"></i> <span class="nav-label">{$_L['CRM']}</span><span class="fa fa-angle-right"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="{$_url}contacts/add/">{$_L['Add Contact']}</a></li>
+    
+                                <li><a href="{$_url}contacts/list/">{$_L['List Contacts']}</a></li>
+                                <li><a href="{$_url}contacts/groups/">Grupos</a></li>
+                                {foreach $sub_menu_admin['crm'] as $sm_crm}
+    
+                                    {$sm_crm}
+    
+    
+                                {/foreach}
+                            </ul>
+                        </li>
+                        <!--  -->
+                    </ul>
+    
+                </div>
+            </nav>
+        </div>
         <div id="page-wrapper" class="gray-bg">
             <div class="row border-bottom">
                 <nav class="navbar navbar-fixed-top white-bg" role="navigation" style="margin-bottom: 0">
 
-                    <img class="logo" src="{$app_url}sysfrm/uploads/system/logo.png" alt="Logo">
+                    <div class="navbar-logo">
+                        <img class="logo" src="{$app_url}sysfrm/uploads/system/logo-img.png" alt="Logo">
+                        <img class="hidden-xs logo" src="{$app_url}sysfrm/uploads/system/logo.svg" alt="Logo">
+                    </div>
                     
-                    <ul class="nav navbar-top-links navbar-right hidden-xs">
+                    <div class="navbar-container">
+                        <div class="left-nav">
+                            <div class="navbar-header">
+                                <a class="navbar-minimalize minimalize-styl-2" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-text-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                                  </svg></a>
+                            </div>
+                            <div class="nav-form hidden-xs">
+                                <form class="m-n p-n" method="post" action="{$_url}contacts/list/">
+                                    <div class="input-group full-width">
+                                        <input type="text" class="form-control" name="name" placeholder="Buscar clientes">
+                                        <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> 
 
-
-
-                        <li>
-                            <form class="navbar-form full-width" method="post" action="{$_url}contacts/list/">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="{$_L['Search Customers']}...">
-                                    <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
-                                </div>
-                            </form>
-                        </li>
-
-                        {*<li>*}
-                        {*<a class="toggle_fullscreen" href="#" data-rel="tooltip" data-placement="top" data-original-title="Fullscreen">*}
-                        {*<i class="fa fa-arrows-alt"></i></a>*}
-
-                        {*</li>*}
-
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" id="get_activity" href="#" aria-expanded="true">
-                                <i class="fa fa-bell"></i>
-                            </a><div class="dropdown-backdrop"></div>
-                        </li>
-
-                        <li class="dropdown navbar-user">
-
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-
-                                {if $user['img'] eq 'gravatar'}
-                                    <img src="http://www.gravatar.com/avatar/{($user['username'])|md5}?s=200&d=mp" class="img-circle" alt="{$user['fullname']}">
-                                {elseif $user['img'] eq ''}
-                                    <img src="{$app_url}ui/lib/imgs/default-user-avatar.png" alt="">
-                                {else}
-                                    <img src="{$app_url}{$user['img']}" class="img-circle" alt="{$user['fullname']}">
-                                {/if}
-
-                                <span class="hidden-xs"> {$user['fullname']}</span> <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="arrow"></li>
-                                <li><a href="{$_url}logout/">{$_L['Logout']}</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
+                        <ul class="nav navbar-top-links navbar-right">    
+                            {*<li>*}
+                            {*<a class="toggle_fullscreen" href="#" data-rel="tooltip" data-placement="top" data-original-title="Fullscreen">*}
+                            {*<i class="fa fa-arrows-alt"></i></a>*}
+    
+                            {*</li>*}
+    
+                            <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" id="get_activity" href="#" aria-expanded="true">
+                                    <svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-bell" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"/>
+                                        <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                                      </svg></a>
+                            </li>
+                            <li class="dropdown navbar-user">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    {if $user['img'] eq 'gravatar'}
+                                        <!-- <img src="http://www.gravatar.com/avatar/{($user['username'])|md5}?s=200&d=mp" class="img-circle" alt="{$user['fullname']}"> -->
+                                        <img src="{$app_url}ui/lib/imgs/default-user-avatar.png" alt="">
+                                    {elseif $user['img'] eq ''}
+                                        <img src="{$app_url}ui/lib/imgs/default-user-avatar.png" alt="">
+                                    {else}
+                                        <img src="{$app_url}{$user['img']}" class="img-circle" alt="{$user['fullname']}">
+                                    {/if}
+    
+                                    <span class="hidden-xs m-r-xs"> {$user['fullname']}</span> <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="arrow"></li>
+                                    <li><a href="{$_url}settings/users-edit/{$user['id']}/">{$_L['Edit Profile']}</a></li>
+                                    <li><a href="{$_url}settings/change-password/">{$_L['Change Password']}</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{$_url}logout/">{$_L['Logout']}</a></li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+                    </div>
 
                 </nav>
             </div>
 
-            <div class="row wrapper white-bg page-heading">
+            <div class="row wrapper page-heading">
                 <div class="col-lg-12">
-                    <h2 style="color: #2F4050; font-size: 16px; font-weight: 400; margin-top: 18px">{$_st} </h2>
+                    <h2>{$_st}
 
                 </div>
 

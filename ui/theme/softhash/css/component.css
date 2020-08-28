@@ -1,4 +1,15 @@
-/* Razi  */
+.ibox .form-horizontal .form-group {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.form-horizontal .control-label {
+    margin-bottom: 5px;
+}
+
+.help-block {
+    float: right;
+}
 
 /* Margin */
 .m0,
@@ -766,6 +777,11 @@
     margin-top: 5px;
 }
 
+.ibox-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
 .ibox-content.text-box {
     padding-bottom: 0px;
     padding-top: 15px;
@@ -785,7 +801,13 @@
     margin-bottom: 25px;
     margin-top: 0;
     padding: 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+    -webkit-box-shadow: 0 0 5px 0 rgba(43,43,43,0.1), 0 11px 6px -7px rgba(43,43,43,0.1);
+    box-shadow: 0 0 5px 0 rgba(43,43,43,0.1), 0 11px 6px -7px rgba(43,43,43,0.1);
+}
+
+.ibox i,
+.btn-success i {
+    margin-right: 5px;
 }
 
 .ibox-title {
@@ -794,16 +816,18 @@
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
     background-color: #ffffff;
-    border-color: #e7eaec;
+    border-color: #e3e6f0;
     border-image: none;
     border-style: none;
     border-width: 0;
-    color: inherit;
+    color: #2c2f34;
     margin-bottom: 0;
-    padding: 14px 15px 7px;
-    height: 48px;
-    border-bottom: 1px solid rgba(0,0,0,.12);
-
+    padding: 16px 20px;
+    height: 64px;
+    border-bottom: 1px solid #e3e6f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .ibox-content {
@@ -833,11 +857,11 @@
 
 .ibox-title h5 {
     display: inline-block;
-    font-size: 14px;
-    margin: 0 0 7px;
-    padding: 0;
+    font-size: 20px;
+    margin: 0;
+    padding: 0 15px 0 0;
     text-overflow: ellipsis;
-    float: left;
+    color: #444;
 }
 
 .ibox-title .label {
@@ -857,10 +881,6 @@
     cursor: pointer;
     margin-left: 5px;
     /*color: #c4c4c4;*/
-}
-
-.ibox-tools a.btn-primary {
-    /*color: #fff;*/
 }
 
 .ibox-tools .dropdown-menu > li > a {
@@ -1026,12 +1046,16 @@ table.dataTable thead .sorting:after {
 
 /* TABLES */
 .table-bordered {
-    border: 1px solid #EBEBEB;
+    white-space: nowrap;
+}
+
+.table {
+    margin-bottom: 0;
 }
 
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
-    background-color: #F5F5F6;
+    background-color: #f5f5fd;
     border-bottom-width: 1px;
 }
 
@@ -1044,21 +1068,49 @@ table.dataTable thead .sorting:after {
     border: 1px solid #e7e7e7;
 }
 
-.table > thead > tr > th {
-    border-bottom: 1px solid #DDDDDD;
-    vertical-align: bottom;
-}
-
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-    border-top: 1px solid #e7eaec;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
     line-height: 1.42857;
-    padding: 8px;
-    vertical-align: top;
+    padding: 14px;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 14px;
+}
+
+.table > thead > tr > th {
+    border-bottom: 1px solid #DDDDDD;
+    vertical-align: bottom;
+    padding: 14px;
+}
+
+.table .btn {
+    padding: 2px 14px;
+}
+
+.table i {
+    font-size: 22px
+}
+
+.table .cdelete {
+    color: #f44336;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.panel-body .table-wrapper {
+    margin-top: 30px;
+}
+
+.table td.text-right{
+    text-align: center;
 }
 
 #croppic {
@@ -1080,8 +1132,6 @@ table.dataTable thead .sorting:after {
 
 .sys_table > thead > tr > th, .sys_table > thead > tr > td {
     background: #FAFBFC;
-    background-image: -moz-linear-gradient(center top, #FAFBFC, #E2E5E9);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#FAFBFC), to(#E2E5E9));
 }
 
 .activity-post {
@@ -1158,24 +1208,25 @@ table.dataTable thead .sorting:after {
 .profile {
     width: 100%;
     float: left;
-    padding: 15px 10px;
+    padding: 30px 10px 20px;
     position: relative;
-    background: #2d3945
+    background: #fff;
 }
 
 .profile .profile-image {
     float: left;
     width: 100%;
-    margin: 0 0 10px;
+    margin: 0 0 14px;
     text-align: center
 }
 
 .profile .profile-image img {
-    width: 100px;
-    border: 3px solid #FFF;
+    width: 130px;
+    border: 1px solid #2c2f34;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border-radius: 50%
+    border-radius: 50%;
+    padding: 6px;
 }
 
 .profile .profile-data {
@@ -1187,9 +1238,9 @@ table.dataTable thead .sorting:after {
 .profile .profile-data .profile-data-name {
     width: 100%;
     float: left;
-    font-size: 14px;
-    font-weight: 500;
-    color: #FFF
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
 }
 
 .profile .profile-data .profile-data-title {
@@ -1246,8 +1297,20 @@ table.dataTable thead .sorting:after {
     width: 100%
 }
 
-.contact-info p {
-    margin-bottom: 5px
+.contact-info p:first-child {
+    margin-bottom: 25px;
+}
+
+.contact-info p:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.contact-info .btn {
+    margin: 0 3px;
+    padding: 8px 45px;
 }
 
 .contact-info strong {
@@ -1256,6 +1319,15 @@ table.dataTable thead .sorting:after {
 
 .contact-info small {
     font-weight: 700
+}
+
+.panel-body {
+    padding: 30px;
+}
+
+.panel-body .form-horizontal,
+.panel-body .form-group {
+    margin-bottom: 0;
 }
 
 .thumb-info {

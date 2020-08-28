@@ -334,12 +334,10 @@ fieldset[disabled] .form-material.floating > label {
     border: none;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-    min-height: 31px;
-    min-width: 70px;
-    padding: 2px 16px;
+    padding: 12px 32px;
+    margin-top: 7px;
     text-align: center;
     text-shadow: none;
-    text-transform: uppercase;
     -webkit-transition: all 280ms cubic-bezier(.4,0,.2,1);
     transition: all 280ms cubic-bezier(.4,0,.2,1);
     color: #212121;
@@ -348,7 +346,7 @@ fieldset[disabled] .form-material.floating > label {
     -webkit-appearance: none;
     display: inline-block;
     vertical-align: middle;
-    font: 500 14px/31px open sans,sans-serif!important;
+    font: 600 15px 'open sans',sans-serif;
 }
 
 .md-btn:active, .md-btn:focus, .md-btn:hover, .uk-button-dropdown.uk-open>.md-btn {
@@ -360,12 +358,12 @@ fieldset[disabled] .form-material.floating > label {
 }
 
 .md-btn-primary, .md-btn-primary:active, .md-btn-primary:focus, .md-btn-primary:hover {
-    background: #2196f3;
+    background: #4687ff;
     color: #fff;
 }
 
 .md-btn-primary, .md-btn-primary:active, .md-btn-primary:focus, .md-btn-primary:hover {
-    background: #2196f3;
+    background: #4687ff;
     color: #fff;
 }
 
