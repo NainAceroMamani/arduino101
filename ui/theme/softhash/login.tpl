@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>{$_L['Login']} - {$_title}</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <title>{$_L['Login']} - {$_title}</title>
+    <link rel="shortcut icon" href="{$app_url}sysfrm/uploads/icon/favicon.ico" type="image/x-icon" />
     <link href="{$_theme}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{$_theme}/lib/fa/css/font-awesome.min.css" rel="stylesheet">
 
@@ -19,17 +19,18 @@
         <link href="{$_theme}/css/style-rtl.min.css" rel="stylesheet">
     {/if}
 
+
 </head>
 
-<body class="light-background">
+<body>
 <div class="no-navigation preload">
     <div class="sign-in-wrapper">
+        <div class="login-brand text-center">
+            <img class="logo" src="{$app_url}sysfrm/uploads/system/logo-black.svg" alt="Logo" width="190">
+        </div>
         <div class="sign-in-inner">
-            <div class="login-brand m-bottom-lg text-center">
-                <img class="logo" src="{$app_url}sysfrm/uploads/system/logo.png" alt="Logo">
-            </div>
             <form class="login" method="post" action="{$_url}admin/post/">
-                <h2 class="text-dark m-bottom-lg font-600 text-center">Iniciar sesión</h2>
+                <h2 class="text-dark font-600 text-center">Iniciar sesión</h2>
                 {if isset($notify)}
                 {$notify}
                 {/if}
@@ -47,13 +48,21 @@
                         <i class="fa fa-exclamation-triangle"></i>
                     </div>
                 </div>
+
+
+
                 <div class="m-top-md p-top-sm">
+
                     <button class="btn btn-success block full-width" name="login" type="submit">{$_L['Sign in']}</button>
                 </div>
+
                 <div class="m-top-md p-top-sm">
                     <div class="font-14 text-center m-bottom-xs">
                         <a href="{$_url}admin/forgot-pw/" class="font-14">{$_L['Forgot password']}</a>
+
                     </div>
+
+
                 </div>
             </form>
         </div><!-- ./sign-in-inner -->
@@ -64,8 +73,7 @@
 
 <!-- Le javascript
 ================================================== -->
-<script src="{$_theme}/js/validation.js"></script>
-
+<script src="{$_theme}/js/validations.js"></script>
 <!-- Placed at the end of the document so the pages load faster -->
 
 <!-- Jquery -->
