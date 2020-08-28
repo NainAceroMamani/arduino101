@@ -171,7 +171,6 @@ $(document).ready(function () {
 
             case "more":
 
-
                 var croppicHeaderOptions = {
 
                     uploadUrl: _url + 'sys_imgcrop/save/',
@@ -185,7 +184,8 @@ $(document).ready(function () {
                     modal:false,
                     loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
                     onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
-                    onAfterImgUpload: function(){ console.log('onAfterImgUpload') },
+                    onAfterImgUpload: function(){ console.log('onAfterImgUpload'); var _url = $('.cropImgWrapper img').attr('src');
+                    $('#picture').val(_url);},
                     onImgDrag: function(){ console.log('onImgDrag') },
                     onImgZoom: function(){ console.log('onImgZoom') },
                     onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
@@ -366,7 +366,6 @@ var sysrender = $('#sysfrm_ajaxrender');
     sysrender.on('click', '#no_image', function(e){
         e.preventDefault();
         $('#picture').val('');
-
     });
 
 

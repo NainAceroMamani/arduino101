@@ -3,12 +3,6 @@ $(document).ready(function () {
     var _url = $("#_url").val();
 
 
-
-
-
-
-
-
     var _msg_add_new_group = $("#_msg_add_new_group").val();
     var _msg_group_name = $("#_msg_group_name").val();
     var _msg_edit = $("#_msg_edit").val();
@@ -16,7 +10,7 @@ $(document).ready(function () {
     var _msg_cancel = $("#_msg_cancel").val();
 
 
-    var ib_form_bootbox = "<form class=\"form-horizontal push-10\" method=\"post\" onsubmit=\"return false;\">\n    <div class=\"form-group\">\n        <div class=\"col-xs-12\">\n            <div class=\"form-material floating\">\n                <input class=\"form-control\" type=\"text\" id=\"group_name\" name=\"group_name\">\n                <label for=\"envato_api_key\">" + _msg_group_name + "</label>\n                           </div>\n        </div>\n    </div>\n\n</form>";
+    var ib_form_bootbox = "<form class=\"form-horizontal push-10\" method=\"post\" onsubmit=\"return false;\">\n    <div class=\"form-group\">\n        <div class=\"col-xs-12\">\n    <label for=\"envato_api_key\">" + _msg_group_name + "</label>\n        <div>\n                <input class=\"form-control\" type=\"text\" id=\"group_name\" name=\"group_name\">\n                    </div>\n        </div>\n    </div>\n\n</form>";
 
 
     var box =   bootbox.dialog({
@@ -24,7 +18,7 @@ $(document).ready(function () {
             message: ib_form_bootbox,
             buttons: {
                 success: {
-                    label: "Save",
+                    label: "Guardar",
                     className: "btn-primary",
                     callback: function () {
                         // var name = $('#name').val();

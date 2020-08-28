@@ -12,7 +12,7 @@ $ui->assign('dashboard_extra_section_3',$dashboard_extra_section_3);
 $ui->assign('dashboard_extra_section_4',$dashboard_extra_section_4);
 $ui->assign('dashboard_extra_section_5',$dashboard_extra_section_5);
 Event::trigger('dashboard/');
-$ui->assign('_title', $_L['Dashboard'].'- '. $config['CompanyName']);
+$ui->assign('_title', $_L['Dashboard'].' - '. $config['CompanyName']);
 $ui->assign('_st', $_L['Dashboard']);
 $user = User::_info();
 $ui->assign('user',$user);

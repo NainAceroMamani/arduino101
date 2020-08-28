@@ -1,7 +1,7 @@
 <?php
 
 _auth();
-$ui->assign('_title', $_L['Settings'].'- '. $config['CompanyName']);
+$ui->assign('_title', $_L['Settings'].' - '. $config['CompanyName']);
 $ui->assign('_pagehead', '<i class="fa fa-cogs lblue"></i> Settings');
 $ui->assign('_st', $_L['Settings']);
 $ui->assign('_sysfrm_menu', 'settings');

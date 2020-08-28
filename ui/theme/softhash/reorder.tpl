@@ -3,7 +3,7 @@
     <div class="col-md-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>{$_L['Reorder']} {$ritem} {$_L['Positions']}</h5>
+                <h5>Reorganizar Grupos</h5>
 
             </div>
             <div class="ibox-content">

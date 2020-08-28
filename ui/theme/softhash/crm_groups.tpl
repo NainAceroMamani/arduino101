@@ -3,17 +3,17 @@
     <div class="col-md-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>{$_L['Groups']}</h5>
+                <h5>Grupos</h5>
 
             </div>
             <div class="ibox-content">
-                <a href="#" class="btn btn-success" id="add_new_group"><i class="fa fa-plus"></i> {$_L['Add New Group']}</a>
+                <a href="#" class="btn btn-success" id="add_new_group"><i class="fa fa-plus"></i> Añadir Grupo</a>
                 <a href="{$_url}reorder/groups/" class="btn btn-primary"><i class="fa fa-arrows"></i> {$_L['Reorder']}</a>
 
                 <br>
                 <br>
                 <table class="table table-striped table-bordered">
-                    <th>{$_L['Group']}</th>
+                    <th>Grupo</th>
                     <th>{$_L['Manage']}</th>
                     {foreach $gs as $g}
                         <tr>
@@ -45,8 +45,8 @@
 
 
 
-<input type="hidden" name="_msg_add_new_group" id="_msg_add_new_group" value="{$_L['Add New Group']}">
-<input type="hidden" name="_msg_group_name" id="_msg_group_name" value="{$_L['Group Name']}">
+<input type="hidden" name="_msg_add_new_group" id="_msg_add_new_group" value="Añadir Nuevo Grupo">
+<input type="hidden" name="_msg_group_name" id="_msg_group_name" value="Nombre del Grupo">
 <input type="hidden" name="_msg_edit" id="_msg_edit" value="{$_L['Edit']}">
 <input type="hidden" name="_msg_ok" id="_msg_ok" value="{$_L['OK']}">
 <input type="hidden" name="_msg_cancel" id="_msg_cancel" value="{$_L['Cancel']}">

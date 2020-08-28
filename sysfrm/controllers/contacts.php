@@ -542,12 +542,12 @@ $i = ORM::for_table('sys_invoices')->where('userid',$cid)->find_many();
 
       //  $ui->assign('_st', $_L['Contacts'].'<span class="pull-right"><a href="'.U.'contacts/set_view_mode/card/'.'"><i class="fa fa-th"></i></a> <a href="'.U.'contacts/set_view_mode/tbl/'.'"><i class="fa fa-align-justify"></i></a> <a href="'.U.'contacts/set_view_mode/search/'.'"><i class="fa fa-search"></i></a></span>');
 
-        $ui->assign('_st', $_L['Contacts'].'<div class="btn-group pull-right" style="padding-right: 10px;">
-  <a class="btn btn-success btn-xs" href="'.U.'contacts/set_view_mode/card/'.'" style="box-shadow: none;"><i class="fa fa-th"></i></a>
+        $ui->assign('_st', $_L['Contacts'].'</h2><div class="btn-group" style="padding-right: 10px;">
+  <a class="btn btn-primary btn-xs" href="'.U.'contacts/set_view_mode/card/'.'" style="box-shadow: none;"><i class="fa fa-th"></i></a>
   <a class="btn btn-primary btn-xs" href="'.U.'contacts/set_view_mode/tbl/'.'" style="box-shadow: none;"><i class="fa fa-align-justify"></i></a>
-  <a class="btn btn-success btn-xs" href="'.U.'contacts/set_view_mode/search/'.'" style="box-shadow: none;"><i class="fa fa-search"></i></a>
+  <a class="btn btn-primary btn-xs" href="'.U.'contacts/set_view_mode/search/'.'" style="box-shadow: none;"><i class="fa fa-search"></i></a>
   <a class="btn btn-primary btn-xs" href="'.U.'contacts/export_csv/'.'" style="box-shadow: none;"><i class="fa fa-download"></i></a>
-  <a class="btn btn-success btn-xs" href="'.U.'contacts/import_csv/'.'" style="box-shadow: none;"><i class="fa fa-upload"></i></a>
+  <a class="btn btn-primary btn-xs" href="'.U.'contacts/import_csv/'.'" style="box-shadow: none;"><i class="fa fa-upload"></i></a>
 </div>');
 
         $name = _post('name');

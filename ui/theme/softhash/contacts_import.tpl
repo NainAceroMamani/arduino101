@@ -4,8 +4,8 @@
     <div class="col-md-12 m-b-sm">
 
         <div class="pull-right">
-            <a href="{$_url}contacts/list/" class="btn btn-xs btn-danger"><i class="fa fa-arrow-left"></i> {$_L['Cancel']}</a>
-             <a href="{$app_url}sysfrm/uploads/system/contacts.csv" class="btn btn-xs btn-primary"><i class="fa fa-download"></i> {$_L['Download Sample File']}</a>
+            <a href="{$_url}contacts/list/" class="btn btn-xs btn-danger"><i class="fa fa-close"></i> {$_L['Cancel']}</a>
+             <a href="{$app_url}sysfrm/uploads/system/contacts.csv" class="btn btn-xs btn-primary"><i class="fa fa-download"></i> Descargar archivo de ejemplo</a>
         </div>
 
     </div>
@@ -21,9 +21,9 @@
                 <form action="{$_url}contacts/csv_upload/" class="dropzone" id="upload_container">
 
                     <div class="dz-message">
-                        <h3> <i class="fa fa-cloud-upload"></i>  {$_L['Drop CSV File Here']}</h3>
+                        <h3> <i class="fa fa-cloud-upload"></i>  Arrastra el archivo CSV aquí</h3>
                         <br />
-                        <span class="note">{$_L['Or Click to Upload']}</span>
+                        <span class="note">O click para seleccionar el archivo</span>
                     </div>
 
                 </form>
