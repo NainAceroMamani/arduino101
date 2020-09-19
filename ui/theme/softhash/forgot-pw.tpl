@@ -57,7 +57,7 @@
 
 <!-- Le javascript
 ================================================== -->
-<script src="{$_theme}/js/validations.js"></script>
+<script src="{$_theme}/js/validation.js"></script>
 <!-- Placed at the end of the document so the pages load faster -->
 
 <!-- Jquery -->
