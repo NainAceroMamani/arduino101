@@ -3,7 +3,7 @@
 _auth();
 $ui->assign('_sysfrm_menu', 'invoices');
 $ui->assign('_st', $_L['Invoices']);
-$ui->assign('_title', $_L['Sales'].'- ' . $config['CompanyName']);
+$ui->assign('_title', $_L['Sales'].' - ' . $config['CompanyName']);
 $action = $routes['1'];
 $user = User::_info();
 $ui->assign('user', $user);
@@ -113,7 +113,7 @@ if($config['i_driver'] == 'default'){
             $a = ORM::for_table('crm_accounts')->find_one($d['userid']);
             $ui->assign('a', $a);
             $ui->assign('d', $d);
-            $ui->assign('_st', $_L['Add Invoice']);
+            $ui->assign('_st', 'Editar Factura');
             $c = ORM::for_table('crm_accounts')->select('id')->select('account')->select('company')->find_many();
             $ui->assign('c', $c);
 
@@ -646,10 +646,8 @@ if($config['i_driver'] == 'default'){
         }
 
 
-        $ui->assign('_st', $_L['Invoices'].'<div class="btn-group pull-right" style="padding-right: 10px;">
-  <a class="btn btn-success btn-xs" href="'.U.'invoices/add/'.'" style="box-shadow: none;"><i class="fa fa-plus"></i></a>
-  <a class="btn btn-primary btn-xs" href="'.U.'invoices/add/'.'" style="box-shadow: none;"><i class="fa fa-repeat"></i></a>
-  <a class="btn btn-success btn-xs" href="'.U.'invoices/export_csv/'.'" style="box-shadow: none;"><i class="fa fa-download"></i></a>
+        $ui->assign('_st', $_L['Invoices'].'</h2><div class="btn-group" style="padding-right: 10px;">
+  <a class="btn btn-primary btn-xs" href="'.U.'invoices/export_csv/'.'" style="box-shadow: none;"><i class="fa fa-download"></i></a>
 </div>');
 
         $ui->assign('xheader', $mode_css);

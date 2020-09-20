@@ -5,10 +5,32 @@
 
 .form-horizontal .control-label {
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 .help-block {
     float: right;
+}
+
+.dropdown-option {
+    font-size: 16px;
+    padding: 15px 0;
+    color: #444;
+    width: 100%;
+    border-bottom: 2px solid #e3e8eb;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-option:focus, 
+.dropdown-option:hover {
+    color: #444;
+}
+
+.dropdown-option span {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 /* Margin */
@@ -822,7 +844,7 @@
     border-width: 0;
     color: #2c2f34;
     margin-bottom: 0;
-    padding: 16px 20px;
+    padding: 18px 20px;
     height: 64px;
     border-bottom: 1px solid #e3e6f0;
     display: flex;
@@ -870,18 +892,23 @@
 }
 
 .ibox-tools {
-    display: inline-block;
     float: right;
     margin-top: 0;
     position: relative;
     padding: 0;
 }
 
-.ibox-tools a {
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .ibox-tools a {
     cursor: pointer;
     margin-left: 5px;
-    /*color: #c4c4c4;*/
-}
+    color: #c4c4c4;
+} */
 
 .ibox-tools .dropdown-menu > li > a {
     padding: 4px 10px;

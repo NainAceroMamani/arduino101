@@ -1,35 +1,10 @@
 #ribbon-container {
     position: absolute;
-    top: 55px;
+    top: 95px;
     right: 0;
     overflow: visible; /* so we can see the pseudo-elements we're going to add to the anchor */
     font-size: 16px; /* font-size and line-height must be equal so we can account for the height of the banner */
     line-height: 16px;
-}
-
-#ribbon-container:before {
-    content:"";
-    height: 0;
-    width: 0;
-    display: block;
-    position: absolute;
-    top: 3px;
-    left: 0;
-    border-top: 20px solid rgba(0,0,0,.3); /* These 4 border properties create the first part of our drop-shadow */
-    border-bottom: 20px solid rgba(0,0,0,.3);
-    border-right: 20px solid rgba(0,0,0,.3);
-    border-left: 20px solid transparent;
-}
-
-#ribbon-container:after { /* This adds the second part of our dropshadow */
-    content:"";
-    height: 3px;
-    background: rgba(0,0,0,.3);
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 40px;
-    right:3px;
 }
 
 #ribbon-container a {

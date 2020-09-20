@@ -2,12 +2,14 @@
 <div class="ibox float-e-margins">
     <div class="ibox-title">
         <h5>{$_L['Total']} : {$total_quote}</h5>
+        <div class="ibox-tools">
+            <a href="{$_url}quotes/new" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Añadir presupuesto</a>
+        </div>
     </div>
     <div class="ibox-content">
 
         <form class="form-horizontal" method="post" action="{$_url}customers/list/">
             <div class="form-group">
-                <div class="col-md-12">
                     <div class="input-group">
                         <div class="input-group-addon">
                             <span class="fa fa-search"></span>
@@ -15,7 +17,6 @@
                         <input type="text" name="name" id="foo_filter" class="form-control" placeholder="{$_L['Search']}..."/>
 
                     </div>
-                </div>
 
             </div>
         </form>
@@ -62,9 +63,9 @@
                     </td>
 
                     <td class="text-right">
-                        <a href="{$_url}quotes/view/{$ds['id']}/" class="btn btn-primary btn-xs"><i class="fa fa-check"></i> {$_L['View']}</a>
-                        <a href="{$_url}quotes/edit/{$ds['id']}/" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> {$_L['Edit']}</a>
-                        <a href="#" class="btn btn-danger btn-xs cdelete" id="iid{$ds['id']}"><i class="fa fa-trash"></i> {$_L['Delete']}</a>
+                        <a href="{$_url}quotes/view/{$ds['id']}/" class="btn"><i class="fa fa-eye"></i></a>
+                        <a href="{$_url}quotes/edit/{$ds['id']}/" class="btn"><i class="fa fa-pencil"></i></a>
+                        <a href="#" class="btn cdelete" id="iid{$ds['id']}"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             {/foreach}

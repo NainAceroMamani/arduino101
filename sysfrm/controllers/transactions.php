@@ -1,9 +1,9 @@
 <?php
 
 _auth();
-$ui->assign('_title', $_L['Transactions'].'- '. $config['CompanyName']);
-$ui->assign('_st', $_L['Transactions']);
-$ui->assign('_sysfrm_menu', 'transactions');
+$ui->assign('_title', 'Transacciones'.' - '. $config['CompanyName']);
+$ui->assign('_st', 'Transacciones');
+$ui->assign('_sysfrm_menu', 'Transacciones');
 $ui->assign('content_inner',inner_contents($config['c_cache']));
 $action = $routes['1'];
 $user = User::_info();
@@ -431,8 +431,8 @@ if($payerid == ''){
         $ui->assign('d',$d);
         $ui->assign('paginator',$paginator);
 
-        $ui->assign('_st', $_L['Transactions'].'<div class="btn-group pull-right" style="padding-right: 10px;">
-  <a class="btn btn-success btn-xs" href="'.U.'transactions/export_csv/'.'" style="box-shadow: none;"><i class="fa fa-download"></i></a>
+        $ui->assign('_st', 'Transacciones'.'</h2><div class="btn-group" style="padding-right: 10px;">
+  <a class="btn btn-primary btn-xs" href="'.U.'transactions/export_csv/'.'" style="box-shadow: none;"><i class="fa fa-download"></i></a>
 </div>');
 
         $ui->assign('xfooter',Asset::js(array('numeric')));

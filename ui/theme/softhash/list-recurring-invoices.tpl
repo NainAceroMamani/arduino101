@@ -1,7 +1,7 @@
 {include file="sections/header.tpl"}
 <div class="ibox float-e-margins">
     <div class="ibox-title">
-        <h5>{$_L['List Invoices']} </h5>
+        <h5>Lista de Facturas Recurrentes </h5>
         <div class="ibox-tools">
             <a href="{$_url}invoices/add/recurring/" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> {$_L['Add Recurring Invoice']}</a>
         </div>
@@ -41,10 +41,10 @@
                             <span class="label label-info">{$ds['status']}</span>
                         {/if}</td>
                     <td class="text-right">
-                        <a href="{$_url}invoices/view/{$ds['id']}" class="btn btn-primary btn-xs"><i class="fa fa-check"></i> {$_L['View']}</a>
-                        <a href="{$_url}invoices/edit/{$ds['id']}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> {$_L['Edit']}</a>
-                        <a href="#" class="btn btn-warning btn-xs cstop" id="sid{$ds['id']}"><i class="fa fa-stop"></i> {$_L['Stop Recurring']}</a>
-                        <a href="#" class="btn btn-danger btn-xs cdelete" id="iid{$ds['id']}"><i class="fa fa-trash"></i> {$_L['Delete']}</a>
+                        <a href="{$_url}invoices/view/{$ds['id']}" class="btn"><i class="fa fa-eye"></i></a>
+                        <a href="{$_url}invoices/edit/{$ds['id']}" class="btn"><i class="fa fa-pencil"></i></a>
+                        <a href="#" class="btn cstop" id="sid{$ds['id']}"><i class="fa fa-stop"></i></a>
+                        <a href="#" class="btn cdelete" id="iid{$ds['id']}"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             {/foreach}

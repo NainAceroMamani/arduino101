@@ -1,4 +1,11 @@
 <?php
+
+function myEach(&$arr) {
+    $key = key($arr);
+    $result = ($key === null) ? false : [$key, current($arr), 'key' => $key, 'value' => current($arr)];
+    next($arr);
+    return $result;
+}
 /**
  * Smarty Internal Plugin CompileBase
  *
@@ -72,7 +79,9 @@ abstract class Smarty_Internal_CompileBase {
                 }
                 // named attribute
             } else {
-                $kv = each($mixed);
+                // $kv = each($mixed);
+                $kv = myEach($mixed);
+
                 // option flag?
                 if (in_array($kv['key'], $this->option_flags)) {
                     if (is_bool($kv['value'])) {

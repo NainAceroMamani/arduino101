@@ -2,14 +2,14 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="form-group">
-            <label for="exampleInputEmail1">{$_L['Unique Quote URL']}:</label>
+            <label for="exampleInputEmail1">URL del presupuesto:</label>
             <input type="text" class="form-control" id="invoice_public_url" onClick="this.setSelectionRange(0, this.value.length)" value="{$_url}client/q/{$d['id']}/token_{$d['vtoken']}">
         </div>
     </div>
     <div class="col-lg-12"  id="sysfrm_ajaxrender">
         <div class="ibox float-e-margins" id="ibox">
             <div class="ibox-title">
-                <h5>{$_L['Quote']} - {$d['invoicenum']}{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if}</h5>
+                <h5>{$_L['Quote']} - N°{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if}</h5>
 
                 <input type="hidden" name="iid" value="{$d['id']}" id="iid">
 
@@ -66,7 +66,7 @@
                     <a href="{$_url}client/q/{$d['id']}/token_{$d['vtoken']}" target="_blank" class="btn btn-primary  btn-sm"><i class="fa fa-paper-plane-o"></i> {$_L['Preview']}</a>
                     <a href="{$_url}quotes/edit/{$d['id']}/" class="btn btn-warning  btn-sm"><i class="fa fa-pencil"></i> {$_L['Edit']}</a>
                     <button type="button" class="btn  btn-danger btn-sm" id="convert_invoice"><i class="fa fa-plus"></i> {$_L['Convert to Invoice']}</button>
-                    <div class="btn-group" role="group">
+                    <!-- <div class="btn-group" role="group">
                         <button type="button" class="btn  btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-file-pdf-o"></i>
                             {$_L['PDF']}
                             <span class="caret"></span>
@@ -75,7 +75,7 @@
                             <li><a href="{$_url}quotes/pdf/{$d['id']}/view" target="_blank">{$_L['View PDF']}</a></li>
                             <li><a href="{$_url}quotes/pdf/{$d['id']}/dl">{$_L['Download PDF']}</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     {*<a href="{$_url}iview/print/{$d['id']}/token_{$d['vtoken']}" target="_blank" class="btn btn-primary  btn-sm"><i class="fa fa-print"></i> {$_L['Print']}</a>*}
 
 
@@ -122,8 +122,8 @@
                     <header class="clearfix">
                         <div class="row">
                             <div class="col-md-12 mt-md">
-                                <h2 class="h2 mt-none mb-sm text-dark text-bold">{$_c['CompanyName']}</h2>
-                                <h4 class="h4 m-none text-dark text-bold">{$_L['Quote']} #{$d['invoicenum']}{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if}</h4>
+                                <h4 class="h4 mt-none mb-sm text-dark text-bold">{$_c['CompanyName']}</h4>
+                                <h2 class="h2 mb-lg text-dark text-bold">{$_L['Quote']} #{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if}</h2>
 
                             </div>
 
@@ -131,9 +131,9 @@
                     </header>
                     <div class="bill-info">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <div class="bill-to">
-                                    <p class="h5 mb-xs text-dark text-semibold"><strong>{$_L['Recipient']}:</strong></p>
+                                    <p class="h5 mb-xs text-dark text-semibold"><strong>Remitente:</strong></p>
                                     <address>
                                         {if $a['company'] neq ''}
                                             {$a['company']}
@@ -167,23 +167,23 @@
 
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="bill-data text-right">
                                     <address class="ib mr-xlg">
                                         {$_c['caddress']}
                                     </address>
                                     <div class="ib">
-                                        <img src="{$app_url}sysfrm/uploads/system/logo.png" alt="Logo">
+                                        <img src="{$app_url}sysfrm/uploads/system/logo-black.svg" alt="Logo">
                                     </div>
                                     <p class="mb-none mt-lg">
                                         <span class="text-dark">{$_L['Date Created']}:</span>
                                         <span class="value">{date( $_c['df'], strtotime($d['datecreated']))}</span>
                                     </p>
                                     <p class="mb-none">
-                                        <span class="text-dark">{$_L['Expiry Date']}:</span>
+                                        <span class="text-dark">{$_L['Expiry Date']}</span>
                                         <span class="value">{date( $_c['df'], strtotime($d['validuntil']))}</span>
                                     </p>
-                                    <h2> {$_L['Total']}: <span class="amount">{$d['total']}</span> </h2>
+                                    <h2 class="font-bold"> {$_L['Total']}: <span class="amount">{$d['total']}</span> </h2>
 
                                 </div>
                             </div>

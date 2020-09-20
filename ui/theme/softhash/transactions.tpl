@@ -4,10 +4,10 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>{$_L['Records']} {$paginator['found']}. {$_L['Page']} {$paginator['page']} {$_L['of']} {$paginator['lastpage']}. </h5>
-
+                <h5>Registro de transacciones</h5>
+                <p class="m-n">{$_L['Page']} {$paginator['page']} {$_L['of']} {$paginator['lastpage']}</p>
             </div>
-            <div class="ibox-content">
+            <div class="ibox-content table-wrapper">
 
                 <table class="table table-bordered sys_table">
                     <th>{$_L['Date']}</th>

@@ -4,7 +4,7 @@
         <div class="ibox float-e-margins">
             <div class="ibox-title">
                 <h5>
-                    {$_L['quote_alias']}
+                    Editar Presupuesto
                 </h5>
 
             </div>
@@ -35,9 +35,10 @@
 
 
                                     <div class="form-group">
-                                        <label for="cid" class="col-sm-4 control-label">{$_L['Customer']}</label>
+                                        <label for="cid" class="control-label">{$_L['Customer']}</label>
+                                        <span class="help-block"><a href="#"
+                                            id="contact_add"><i class="fa fa-plus"></i>Añadir Cliente</a> </span>
 
-                                        <div class="col-sm-8">
                                             <select id="cid" name="cid" class="form-control">
                                                 <option value="">{$_L['Select Contact']}...</option>
                                                 {foreach $c as $cs}
@@ -46,40 +47,30 @@
                                                 {/foreach}
 
                                             </select>
-                                            <span class="help-block"><a href="#"
-                                                                        id="contact_add">| {$_L['Or Add New Customer']}</a> </span>
-                                        </div>
                                     </div>
 
                                     {$extra_fields}
 
                                     <div class="form-group">
                                         <label for="inputPassword3"
-                                               class="col-sm-4 control-label">{$_L['Address']}</label>
-
-                                        <div class="col-sm-8">
+                                               class="control-label">{$_L['Address']}</label>
                                             <textarea id="address" readonly class="form-control" rows="5"></textarea>
-                                        </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="invoicenum"
-                                               class="col-sm-4 control-label">{$_L['Quote Prefix']}</label>
+                                               class="control-label">{$_L['Quote Prefix']}</label>
 
-                                        <div class="col-sm-4">
                                             <input type="text" class="form-control" id="invoicenum" name="invoicenum" value="{$d['invoicenum']}">
 
-                                        </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="cn"
-                                               class="col-sm-4 control-label">{$_L['Quote']} #</label>
+                                               class="control-label">Número de Presupuesto</label>
 
-                                        <div class="col-sm-8">
                                             <input type="text" class="form-control" id="cn" name="cn" value="{$d['cn']}">
-                                            <span class="help-block">{$_L['quote_number_help']}</span>
-                                        </div>
+                                            <span class="help-block">Dejar en blanco para generar un número automaticamente</span>
                                     </div>
 
 
@@ -90,31 +81,26 @@
                                 <div class="form-horizontal">
                                     <div class="form-group">
                                         <label for="inputEmail3"
-                                               class="col-sm-4 control-label">{$_L['Date Created']}</label>
+                                               class="control-label">{$_L['Date Created']}</label>
 
-                                        <div class="col-sm-8">
                                             <input type="text" class="form-control" id="idate" name="idate" datepicker
                                                    data-date-format="yyyy-mm-dd" data-auto-close="true"
                                                    value="{$d['datecreated']}">
-                                        </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="edate"
-                                               class="col-sm-4 control-label">{$_L['Expiry Date']}</label>
+                                               class="control-label">{$_L['Expiry Date']}</label>
 
-                                        <div class="col-sm-8">
                                             <input type="text" class="form-control" id="edate" name="edate" datepicker
                                                    data-date-format="yyyy-mm-dd" data-auto-close="true"
                                                    value="{$d['validuntil']}">
-                                        </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="stage"
-                                               class="col-sm-4 control-label">{$_L['Stage']}</label>
+                                               class="control-label">{$_L['Stage']}</label>
 
-                                        <div class="col-sm-8">
                                             <select class="form-control" name="stage" id="stage">
                                                 <option value="Draft" {if $d['stage'] eq 'Draft'}selected{/if}>{$_L['Draft']}</option>
                                                 <option value="Delivered" {if $d['stage'] eq 'Delivered'}selected{/if}>{$_L['Delivered']}</option>
@@ -122,12 +108,10 @@
                                                 <option value="Lost" {if $d['stage'] eq 'Lost'}selected{/if}>{$_L['Lost']}</option>
                                                 <option value="Dead" {if $d['stage'] eq 'Dead'}selected{/if}>{$_L['Dead']}</option>
                                             </select>
-                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="tid" class="col-sm-4 control-label">{$_L['Sales TAX']}</label>
+                                        <label for="tid" class="control-label">{$_L['Sales TAX']}</label>
 
-                                        <div class="col-sm-8">
                                             <select id="tid" name="tid" class="form-control">
                                                 <option value="">{$_L['None']}</option>
                                                 {foreach $t as $ts}
@@ -142,19 +126,16 @@
                                             <input type="hidden" id="stax" name="stax" value="{$d['taxrate']}">
                                             <input type="hidden" id="discount_amount" name="discount_amount" value="{$d['discount_value']}">
                                             <input type="hidden" id="discount_type" name="discount_type" value="{$d['discount_type']}">
-                                        </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="add_discount"
-                                               class="col-sm-4 control-label">{$_L['Discount']}</label>
+                                               class="control-label">{$_L['Discount']}</label>
 
-                                        <div class="col-sm-8">
 
-                                            <a href="#" id="add_discount" class="btn btn-info btn-xs"
+                                            <a href="#" id="add_discount" class="btn-block"
                                                style="margin-top: 5px;"><i
-                                                        class="fa fa-minus-circle"></i> {$_L['Set Discount']}</a>
-                                        </div>
+                                                        class="fa fa-plus-square"></i> {$_L['Set Discount']}</a>
                                     </div>
 
 
@@ -167,9 +148,9 @@
                             <div class="col-md-12">
                                 <hr>
                                 <div class="form-group">
-                                    <label for="proposal_text">{$_L['Proposal Text']}</label>
+                                    <label for="proposal_text">{$_L['Proposal Text']}</label><span> ({$_L['quote_help_top']})</span>
+
                                     <textarea class="form-control" id="proposal_text" name="proposal_text" rows="6">{$d['proposal']}</textarea>
-                                    <span class="help-block">{$_L['quote_help_top']}</span>
                                 </div>
                                 <hr>
                             </div>
@@ -182,8 +163,8 @@
                             <table class="table invoice-table" id="invoice_items">
                                 <thead>
                                 <tr>
-                                    <th width="10%">{$_L['Item Code']}</th>
-                                    <th width="50%">{$_L['Item Name']}</th>
+                                    <th width="10%">Codigo</th>
+                                    <th width="50%">Nombre</th>
                                     <th width="10%">{$_L['Qty']}</th>
                                     <th width="10%">{$_L['Price']}</th>
                                     <th width="10%">{$_L['Total']}</th>
@@ -206,12 +187,9 @@
 
                         </div>
                         <!-- /table-responsive -->
-                        <button type="button" class="btn btn-primary" id="blank-add"><i
-                                    class="fa fa-plus"></i> {$_L['Add blank Line']}</button>
-                        <button type="button" class="btn btn-primary" id="item-add"><i
-                                    class="fa fa-search"></i> {$_L['Add Product OR Service']}</button>
-                        <button type="button" class="btn btn-danger" id="item-remove"><i
-                                    class="fa fa-minus-circle"></i> {$_L['Delete']}</button>
+                        <button type="button" class="btn btn-gray" id="blank-add">{$_L['Add blank Line']}</button>
+                        <button type="button" class="btn btn-gray" id="item-add">{$_L['Add Product OR Service']}</button>
+                        <button type="button" class="btn btn-danger" id="item-remove">{$_L['Delete']}</button>
                         <table class="table invoice-total">
                             <tbody>
                             <tr>
@@ -243,9 +221,8 @@
                         <hr>
 
                         <div class="form-group">
-                            <label for="customer_notes">{$_L['Customer Notes']}</label>
+                            <label for="customer_notes">{$_L['Customer Notes']}</label><span> ({$_L['quote_help_footer']})</span>
                             <textarea class="form-control" id="customer_notes" name="customer_notes" rows="6">{$d['customernotes']}</textarea>
-                            <span class="help-block">{$_L['quote_help_footer']}</span>
                         </div>
 
                         <div class="text-right">

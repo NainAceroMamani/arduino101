@@ -20,10 +20,10 @@
                             <td>{$g['gname']}</td>
 
                             <td>
-                                <a href="{$_url}contacts/find_by_group/{$g['id']}/" class="btn btn-xs btn-primary"><i class="fa fa-bars"></i> {$_L['List Contacts']}</a>
-                                <a href="#" class="btn btn-xs btn-warning edit_group" id="e{$g['id']}" data-name="{$g['gname']}"><i class="fa fa-pencil"></i> {$_L['Edit']}</a>
+                                <a href="{$_url}contacts/find_by_group/{$g['id']}/" class="btn"><i class="fa fa-bars"></i></a>
+                                <a href="#" class="btn edit_group" id="e{$g['id']}" data-name="{$g['gname']}"><i class="fa fa-pencil"></i></a>
 
-                                    <a href="{$_url}settings/users-delete/{$g['id']}" id="g{$g['id']}" class="btn btn-xs btn-danger cdelete"><i class="fa fa-trash"></i> {$_L['Delete']}</a>
+                                    <a href="{$_url}settings/users-delete/{$g['id']}" id="g{$g['id']}" class="btn cdelete"><i class="fa fa-trash"></i></a>
 
                             </td>
                         </tr>

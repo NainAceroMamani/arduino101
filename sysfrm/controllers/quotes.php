@@ -3,7 +3,7 @@
 _auth();
 $ui->assign('_sysfrm_menu', 'invoices');
 $ui->assign('_st', $_L['Quotes']);
-$ui->assign('_title', $_L['Sales'].'- ' . $config['CompanyName']);
+$ui->assign('_title', $_L['Sales'].' - ' . $config['CompanyName']);
 $action = $routes['1'];
 $user = User::_info();
 $ui->assign('user', $user);
@@ -32,7 +32,7 @@ switch ($action) {
             $ui->assign('p_cid', '');
         }
 
-        $ui->assign('_st', $_L['Add Invoice']);
+        $ui->assign('_st', 'Presupuestos');
         $c = ORM::for_table('crm_accounts')->select('id')->select('account')->select('company')->select('email')->order_by_desc('id')->find_many();
         $ui->assign('c', $c);
 
@@ -88,7 +88,7 @@ minHeight: 300 // pixels
             $a = ORM::for_table('crm_accounts')->find_one($d['userid']);
             $ui->assign('a', $a);
             $ui->assign('d', $d);
-            $ui->assign('_st', $_L['Add Invoice']);
+            $ui->assign('_st', 'Presupuestos');
             $c = ORM::for_table('crm_accounts')->select('id')->select('account')->select('company')->find_many();
             $ui->assign('c', $c);
 

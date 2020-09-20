@@ -1,6 +1,6 @@
 {include file="sections/header.tpl"}
 <div class="row">
-<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="col-lg-5 col-md-6 col-sm-12">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
             <h5>{$_L['Add Deposit']}</h5>
@@ -12,37 +12,29 @@
             </div>
             <form class="form-horizontal" method="post" id="tform" role="form">
                 <div class="form-group">
-                    <label for="account" class="col-sm-3 control-label">{$_L['Account']}</label>
-                    <div class="col-sm-9">
-                        <select id="account" name="account" class="form-control">
-                            <option value="">{$_L['Choose an Account']}</option>
-                            {foreach $d as $ds}
-                                <option value="{$ds['account']}">{$ds['account']}</option>
-                            {/foreach}
+                    <label for="account" class="control-label">{$_L['Account']}</label>    
+                    <select id="account" name="account" class="form-control">
+                        <option value="">{$_L['Choose an Account']}</option>
+                        {foreach $d as $ds}
+                            <option value="{$ds['account']}">{$ds['account']}</option>
+                        {/foreach}
 
 
-                        </select>
-                    </div>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="date" class="col-sm-3 control-label">{$_L['Date']}</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control"  value="{$mdate}" name="date" id="date" datepicker data-date-format="yyyy-mm-dd" data-auto-close="true">
-                    </div>
+                    <label for="date" class="control-label">{$_L['Date']}</label>
+                    <input type="text" class="form-control"  value="{$mdate}" name="date" id="date" datepicker data-date-format="yyyy-mm-dd" data-auto-close="true">
                 </div>
 
                 <div class="form-group">
-                    <label for="description" class="col-sm-3 control-label">{$_L['Description']}</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="description" name="description">
-                    </div>
+                    <label for="description" class="control-label">{$_L['Description']}</label>
+                    <input type="text" class="form-control" id="description" name="description">
                 </div>
 
                 <div class="form-group">
-                    <label for="amount" class="col-sm-3 control-label">{$_L['Amount']}</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control amount" id="amount" name="amount">
-                    </div>
+                    <label for="amount" class="control-label">{$_L['Amount']}</label>
+                    <input type="text" class="form-control amount" id="amount" name="amount">
                 </div>
 
 
@@ -51,17 +43,14 @@
 
 
                 <div class="form-group">
-                    <div class="col-sm-3">
-                        &nbsp;
-                    </div>
-                    <div class="col-sm-9">
-                        <h4><a href="#" id="a_toggle">{$_L['Advanced']}</a> </h4>
+                    <div>
+                        <h4><a href="#" class="dropdown-option" id="a_toggle">{$_L['Advanced']}<span class="fa fa-angle-down"></span></a></h4>
                     </div>
                 </div>
                 <div id="a_hide" class="form-horizontal" >
                     <div class="form-group">
-                        <label for="cats" class="col-sm-3 control-label">{$_L['Category']}</label>
-                        <div class="col-sm-9">
+                        <label for="cats" class="control-label">{$_L['Category']}</label>
+                        
                             <select id="cats" name="cats" class="form-control">
                                 <option value="Uncategorized">{$_L['Uncategorized']}</option>
 
@@ -71,22 +60,22 @@
 
 
                             </select>
-                        </div>
+
                     </div>
                     <div class="form-group">
-                        <label for="tags" class="col-sm-3 control-label">{$_L['Tags']}</label>
-                        <div class="col-sm-9">
+                        <label for="tags" class="control-label">{$_L['Tags']}</label>
+                        
                             <select name="tags[]" id="tags"  class="form-control" multiple="multiple">
                                 {foreach $tags as $tag}
                                     <option value="{$tag['text']}">{$tag['text']}</option>
                                 {/foreach}
 
                             </select>
-                        </div>
+                        
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">{$_L['Payer']}</label>
-                        <div class="col-sm-9">
+                        <label for="inputPassword3" class="control-label">{$_L['Payer']}</label>
+                        
                             <select id="payer" name="payer" class="form-control">
                                 <option value="">{$_L['Choose Contact']}</option>
                                 {foreach $p as $ps}
@@ -95,11 +84,11 @@
 
 
                             </select>
-                        </div>
+                        
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">{$_L['Method']}</label>
-                        <div class="col-sm-9">
+                        <label for="inputPassword3" class="control-label">{$_L['Method']}</label>
+                        
                             <select id="pmethod" name="pmethod" class="form-control">
                                 <option value="">{$_L['Select Payment Method']}</option>
                                 {foreach $pms as $pm}
@@ -108,19 +97,19 @@
 
 
                             </select>
-                        </div>
+                        
                     </div>
                     <div class="form-group">
-                        <label for="ref" class="col-sm-3 control-label">{$_L['Ref']}#</label>
-                        <div class="col-sm-9">
+                        <label for="ref" class="control-label">{$_L['Ref']}#</label>
+                        
                             <input type="text" class="form-control" id="ref" name="ref">
                             <span class="help-block">{$_L['ref_example']}</span>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-9">
-                        <button type="submit" id="submit" class="btn btn-primary"><i class="fa fa-check"></i> {$_L['Submit']}</button>
+                    <div class="">
+                        <button type="submit" id="submit" class="btn btn-primary">{$_L['Submit']}</button>
                     </div>
                 </div>
             </form>
@@ -129,7 +118,7 @@
     </div>
 </div>
 
-<div class="col-lg-8 col-md-6 col-sm-12">
+<div class="col-lg-7 col-md-6 col-sm-12">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
             <h5>{$_L['Recent Deposits']}</h5>

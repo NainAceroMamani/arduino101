@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="form-group">
-            <label for="exampleInputEmail1">{$_L['Unique Invoice URL']}:</label>
+            <label for="exampleInputEmail1">URL de Factura:</label>
             <input type="text" class="form-control" id="invoice_public_url" onClick="this.setSelectionRange(0, this.value.length)" value="{$_url}client/iview/{$d['id']}/token_{$d['vtoken']}">
         </div>
     </div>
@@ -58,7 +58,7 @@
 
                     <a href="{$_url}client/iview/{$d['id']}/token_{$d['vtoken']}" target="_blank" class="btn btn-primary  btn-sm"><i class="fa fa-paper-plane-o"></i> {$_L['Preview']}</a>
                     <a href="{$_url}invoices/edit/{$d['id']}" class="btn btn-warning  btn-sm"><i class="fa fa-pencil"></i> {$_L['Edit']}</a>
-                    <div class="btn-group" role="group">
+                    <!-- <div class="btn-group" role="group">
                         <button type="button" class="btn  btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-file-pdf-o"></i>
                             {$_L['PDF']}
                             <span class="caret"></span>
@@ -67,7 +67,7 @@
                             <li><a href="{$_url}invoices/pdf/{$d['id']}/view" target="_blank">{$_L['View PDF']}</a></li>
                             <li><a href="{$_url}invoices/pdf/{$d['id']}/dl">{$_L['Download PDF']}</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <a href="{$_url}iview/print/{$d['id']}/token_{$d['vtoken']}" target="_blank" class="btn btn-primary  btn-sm"><i class="fa fa-print"></i> {$_L['Print']}</a>
 
 
@@ -80,16 +80,15 @@
                     <header class="clearfix">
                         <div class="row">
                             <div class="col-sm-6 mt-md">
-                                <h2 class="h2 mt-none mb-sm text-dark text-bold">{$_L['INVOICE']}</h2>
-                                <h4 class="h4 m-none text-dark text-bold">#{$d['invoicenum']}{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if}</h4>
+                                <span class="h2 mt-none mb-sm text-dark text-bold">{$_L['INVOICE']} #{$d['invoicenum']}{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if}</span>
                                 {if $d['status'] eq 'Unpaid'}
-                                    <h3 class="alert alert-danger">{$_L['Unpaid']}</h3>
+                                    <span class="font-bold m-l-md alert alert-danger">{$_L['Unpaid']}</span>
                                 {elseif $d['status'] eq 'Paid'}
-                                    <h3 class="alert alert-success">{$_L['Paid']}</h3>
+                                    <span class="font-bold m-l-md alert alert-success">{$_L['Paid']}</span>
                                 {elseif $d['status'] eq 'Partially Paid'}
-                                    <h3 class="alert alert-info">{$_L['Partially Paid']}</h3>
+                                    <span class="font-bold m-l-md alert alert-info">{$_L['Partially Paid']}</span>
                                 {else}
-                                    <h3 class="alert alert-info">{$d['status']}</h3>
+                                    <span class="font-bold m-l-md alert alert-info">{$d['status']}</span>
                                 {/if}
                             </div>
                             <div class="col-sm-6 text-right mt-md mb-md">
@@ -97,7 +96,7 @@
                                     {$_c['caddress']}
                                 </address>
                                 <div class="ib">
-                                    <img src="{$app_url}sysfrm/uploads/system/logo.png" alt="Logo">
+                                    <img src="{$app_url}sysfrm/uploads/system/logo-black.svg" alt="Logo">
                                 </div>
                             </div>
                         </div>
@@ -106,7 +105,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="bill-to">
-                                    <p class="h5 mb-xs text-dark text-semibold"><strong>{$_L['Invoiced To']}:</strong></p>
+                                    <p class="h5 mb-xs text-dark text-semibold"><strong>{$_L['Invoiced To']}</strong></p>
                                     <address>
                                         {if $a['company'] neq ''}
                                             {$a['company']}
@@ -150,7 +149,7 @@
                                         <span class="text-dark">{$_L['Due Date']}:</span>
                                         <span class="value">{date( $_c['df'], strtotime($d['duedate']))}</span>
                                     </p>
-                                    <h2> {$_L['Invoice Total']}: <span class="amount">{$d['total']}</span> </h2>
+                                    <h2 class="font-bold"> {$_L['Invoice Total']}: <span class="amount">{$d['total']}</span> </h2>
                                     {if ($d['credit']) neq '0.00'}
                                         <h2> {$_L['Total Paid']}:  <span class="amount">{$d['credit']}</span> </h2>
                                         {*<h2> {$_L['Amount Due']}: {$_c['currency_code']} {number_format($i_due,2,$_c['dec_point'],$_c['thousands_sep'])} </h2>*}

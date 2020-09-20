@@ -1,9 +1,9 @@
 {include file="sections/header.tpl"}
 <div class="row">
     <div class="col-lg-12">
-        <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="wrapper wrapper-content ibox">
             <form id="invform" method="post">
-                <div class="ibox-content p-xl" id="ibox_form">
+                <div class="ibox-content" id="ibox_form">
                     <div class="row">
                         <div class="alert alert-danger" id="emsg">
                             <span id="emsgbody"></span>
@@ -11,9 +11,8 @@
                         <div class="col-md-6">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="cid" class="col-sm-2 control-label">{$_L['Customer']}</label>
+                                    <label for="cid" class="control-label">{$_L['Customer']}</label>
 
-                                    <div class="col-sm-10">
                                         <select id="cid" name="cid" class="form-control">
                                             <option value="">{$_L['Select Contact']}...</option>
                                             {foreach $c as $cs}
@@ -22,34 +21,27 @@
                                             {/foreach}
 
                                         </select>
-                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label">{$_L['Address']}</label>
+                                    <label for="inputPassword3" class="control-label">{$_L['Address']}</label>
 
-                                    <div class="col-sm-10">
                                         <textarea id="address" readonly class="form-control" rows="5"></textarea>
-                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="invoicenum"
-                                           class="col-sm-2 control-label">{$_L['Invoice Prefix']}</label>
+                                           class="control-label">{$_L['Invoice Prefix']}</label>
 
-                                    <div class="col-sm-6">
                                         <input type="text" class="form-control" id="invoicenum" name="invoicenum"
                                                value="{$i['invoicenum']}">
-                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="cn"
-                                           class="col-sm-2 control-label">{$_L['Invoice']} #</label>
+                                           class="control-label">Numero de Factura</label>
 
-                                    <div class="col-sm-10">
                                         <input type="text" class="form-control" id="cn" name="cn" value="{$i['cn']}">
-                                        <span class="help-block">{$_L['invoice_number_help']}</span>
-                                    </div>
+                                        <span class="help-block">Dejar en blanco para generar un numero automaticamente</span>
                                 </div>
 
                             </div>
@@ -60,9 +52,8 @@
                                 {if $i['r'] neq '0'}
                                     <div class="form-group">
                                         <label for="inputEmail3"
-                                               class="col-sm-4 control-label">{$_L['Repeat Every']}</label>
+                                               class="control-label">{$_L['Repeat Every']}</label>
 
-                                        <div class="col-sm-8">
                                             <select class="form-control" name="repeat" id="repeat">
                                                 <option value="week1" {if $i['r'] eq '+1 week'} selected{/if}>{$_L['Week']}</option>
                                                 <option value="weeks2" {if $i['r'] eq '+2 weeks'} selected{/if}>{$_L['Weeks_2']}</option>
@@ -75,34 +66,28 @@
                                                 <option value="years3" {if $i['r'] eq '+3 years'} selected{/if}>{$_L['Years_3']}</option>
 
                                             </select>
-                                        </div>
                                     </div>
                                 {else}
                                     <input type="hidden" name="repeat" id="repeat" value="0">
                                 {/if}
                                 <div class="form-group">
                                     <label for="inputEmail3"
-                                           class="col-sm-4 control-label">{$_L['Invoice Date']}</label>
+                                           class="control-label">{$_L['Invoice Date']}</label>
 
-                                    <div class="col-sm-8">
                                         <input type="text" class="form-control" id="idate" name="idate" datepicker
                                                data-date-format="yyyy-mm-dd" data-auto-close="true"
                                                value="{$i['date']}">
-                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-4 control-label">{$_L['Due Date']}</label>
+                                    <label for="inputPassword3" class="control-label">{$_L['Due Date']}</label>
 
-                                    <div class="col-sm-8">
                                         <input type="text" class="form-control" id="ddate" name="ddate" datepicker
                                                data-date-format="yyyy-mm-dd" data-auto-close="true"
                                                value="{$i['duedate']}">
-                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="tid" class="col-sm-4 control-label">{$_L['Sales TAX']}</label>
+                                    <label for="tid" class="control-label">Impuesto</label>
 
-                                    <div class="col-sm-8">
                                         <select id="tid" name="tid" class="form-control">
                                             <option value="">None</option>
                                             {foreach $t as $ts}
@@ -119,19 +104,16 @@
                                                value="{$i['discount_value']}">
                                         <input type="hidden" id="discount_type" name="discount_type"
                                                value="{$i['discount_type']}">
-                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="add_discount"
-                                           class="col-sm-4 control-label">{$_L['Discount']}</label>
+                                           class="control-label">{$_L['Discount']}</label>
 
-                                    <div class="col-sm-8">
 
-                                        <a href="#" id="add_discount" class="btn btn-info btn-xs"
+                                        <a href="#" id="add_discount" class="btn-block"
                                            style="margin-top: 5px;"><i
-                                                    class="fa fa-minus-circle"></i> {$_L['Set Discount']}</a>
-                                    </div>
+                                                    class="fa fa-plus-square"></i> {$_L['Set Discount']}</a>
                                 </div>
 
                             </div>
@@ -139,12 +121,12 @@
                     </div>
 
 
-                    <div class="table-responsive m-t">
+                    <div class="table-responsive m-b">
                         <table class="table invoice-table" id="invoice_items">
                             <thead>
                             <tr>
-                                <th width="10%">{$_L['Item Code']}</th>
-                                <th width="55%">{$_L['Item Name']}</th>
+                                <th width="10%">Codigo</th>
+                                <th width="55%">Nombre</th>
                                 <th width="10%">{$_L['Qty']}</th>
                                 <th width="10%">{$_L['Price']}</th>
                                 <th width="15%">{$_L['Total']}</th>
@@ -187,12 +169,11 @@
 
                     </div>
                     <!-- /table-responsive -->
-                    <button type="button" class="btn btn-primary" id="blank-add"><i class="fa fa-plus"></i> {$_L['Add blank Line']}
+                    <button type="button" class="btn btn-gray" id="blank-add">{$_L['Add blank Line']}
                     </button>
-                    <button type="button" class="btn btn-primary" id="item-add"><i class="fa fa-search"></i> {$_L['Add Product OR Service']}
+                    <button type="button" class="btn btn-gray" id="item-add">{$_L['Add Product OR Service']}
                     </button>
-                    <button type="button" class="btn btn-danger" id="item-remove"><i class="fa fa-minus-circle"></i>
-                        {$_L['Delete']}
+                    <button type="button" class="btn btn-danger" id="item-remove">{$_L['Delete']}
                     </button>
                     <table class="table invoice-total">
                         <tbody>

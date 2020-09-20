@@ -1,9 +1,9 @@
 <?php
 
 _auth();
-$ui->assign('_title', $_L['Transactions'].'- '. $config['CompanyName']);
-$ui->assign('_st', 'Transactions');
-$ui->assign('_sysfrm_menu', 'transactions');
+$ui->assign('_title', $_L['Transactions'].' - '. $config['CompanyName']);
+$ui->assign('_st', 'Transacciones');
+$ui->assign('_sysfrm_menu', 'Transacciones');
 $action = $routes['1'];
 $user = User::_info();
 $ui->assign('user', $user);

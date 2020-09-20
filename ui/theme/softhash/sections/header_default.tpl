@@ -80,6 +80,42 @@
                                 {/foreach}
                             </ul>
                         </li>
+                        {$admin_extra_nav[2]}
+                        {if $_c['accounting'] eq '1'}
+                            <li class="{if $_sysfrm_menu eq 'transactions'}active{/if}">
+                                <a href="#"><i class="fa fa-database"></i> <span class="nav-label">{$_L['Transactions']}</span><span class="fa fa-angle-right"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="{$_url}transactions/deposit/">Depósitos</a></li>
+                                    <li><a href="{$_url}transactions/expense/">Gastos</a></li>
+                                    <li><a href="{$_url}transactions/transfer/">Transferencias</a></li>
+                                    <li><a href="{$_url}transactions/list/">{$_L['View Transactions']}</a></li>
+                                    <li><a href="{$_url}generate/balance-sheet/">{$_L['Balance Sheet']}</a></li>
+                                </ul>
+                            </li>
+                        {/if}
+                        {$admin_extra_nav[3]}
+                        {*<li {if $_sysfrm_menu eq 'tasks'}class="active"{/if}><a href="{$_url}tasks/me"><i class="fa fa-tasks"></i> <span class="nav-label">Tasks</span></a></li>*}
+    
+                        {if ($_c['invoicing'] eq '1') OR ($_c['quotes'] eq '1')}
+    
+                            <li class="{if $_sysfrm_menu eq 'invoices'}active{/if}">
+                                <a href="#"><i class="icon-credit-card-1"></i> <span class="nav-label">{$_L['Sales']}</span><span class="fa fa-angle-right"></span></a>
+                                <ul class="nav nav-second-level">
+    
+                                    {if $_c['invoicing'] eq '1'}
+                                        <li><a href="{$_url}invoices/list/">{$_L['Invoices']}</a></li>
+                                        <li><a href="{$_url}invoices/list-recurring/">{$_L['Recurring Invoices']}</a></li>
+                                    {/if}
+    
+                                    {if $_c['quotes'] eq '1'}
+                                        <li><a href="{$_url}quotes/list/">{$_L['Quotes']}</a></li>
+                                        <!-- <li><a href="{$_url}quotes/new/">{$_L['Create New Quote']}</a></li> -->
+                                    {/if}
+    
+                                </ul>
+                            </li>
+    
+                        {/if}
                         <!--  -->
                     </ul>
     
@@ -106,7 +142,7 @@
                                 <form class="m-n p-n" method="post" action="{$_url}contacts/list/">
                                     <div class="input-group full-width">
                                         <input type="text" class="form-control" name="name" placeholder="Buscar clientes">
-                                        <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
+                                        <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
                                     </div>
                                 </form>
                             </div>

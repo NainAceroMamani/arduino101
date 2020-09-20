@@ -130,8 +130,7 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>{$_L['Income n Expense']} - {ib_lan_get_line(date('F'))} {date('Y')}</h5>
-                    <!-- <a href="{$_url}transactions/list/" class="btn btn-primary btn-xs pull-right"><i class="fa fa-list"></i> {$_L['Transactions']}</a> -->
-                    <a href="#" class="btn btn-primary btn-xs pull-right"><i class="fa fa-list"></i> {$_L['Transactions']}</a>
+                    <a href="{$_url}transactions/list/" class="btn btn-primary btn-xs pull-right"><i class="fa fa-list"></i> {$_L['Transactions']}</a>
                 </div>
                 <div class="ibox-content">
                     <div id="chart"></div>
@@ -200,8 +199,7 @@
         <div class="ibox float-e-margins">
             <div class="ibox-title">
                 <h5>Facturas Recientes</h5>
-                <!-- <a href="{$_url}invoices/list/" class="btn btn-primary btn-xs pull-right"><i class="fa fa-list"></i> {$_L['Invoices']}</a> -->
-                <a href="#" class="btn btn-primary btn-xs pull-right"><i class="fa fa-list"></i> {$_L['Invoices']}</a>
+                <a href="{$_url}invoices/list/" class="btn btn-primary btn-xs pull-right"><i class="fa fa-list"></i> {$_L['Invoices']}</a>
             </div>
             <div class="ibox-content">
                 <div class="table-wrapper">
@@ -222,10 +220,8 @@
     
                         {foreach $invoices as $ds}
                             <tr>
-                                <!-- <td><a href="{$_url}invoices/view/{$ds['id']}/">{$ds['invoicenum']}{if $ds['cn'] neq ''} {$ds['cn']} {else} {$ds['id']} {/if}</a> </td>
-                                <td><a href="{$_url}contacts/view/{$ds['userid']}/">{$ds['account']}</a> </td> -->
-                                <td><a href="#">{$ds['invoicenum']}{if $ds['cn'] neq ''} {$ds['cn']} {else} {$ds['id']} {/if}</a> </td>
-                                <td><a href="#">{$ds['account']}</a> </td>
+                                <td><a href="{$_url}invoices/view/{$ds['id']}/">{$ds['invoicenum']}{if $ds['cn'] neq ''} {$ds['cn']} {else} {$ds['id']} {/if}</a> </td>
+                                <td><a href="{$_url}contacts/view/{$ds['userid']}/">{$ds['account']}</a> </td>
                                 <td class="amount">{$ds['total']}</td>
                                 <td>{date( $_c['df'], strtotime($ds['date']))}</td>
                                 <td>{date( $_c['df'], strtotime($ds['duedate']))}</td>
@@ -241,10 +237,8 @@
                                     {/if}
                                 </td>
                                 <td class="text-right">
-                                    <!-- <a href="{$_url}invoices/view/{$ds['id']}/" class="btn"><i class="fa fa-eye"></i></a>
-                                    <a href="{$_url}invoices/edit/{$ds['id']}/" class="btn"><i class="fa fa-pencil"></i></a> -->
-                                    <a href="#" class="btn"><i class="fa fa-eye"></i></a>
-                                    <a href="#" class="btn"><i class="fa fa-pencil"></i></a>
+                                    <a href="{$_url}invoices/view/{$ds['id']}/" class="btn"><i class="fa fa-eye"></i></a>
+                                    <a href="{$_url}invoices/edit/{$ds['id']}/" class="btn"><i class="fa fa-pencil"></i></a>
                                 </td>
                             </tr>
                         {/foreach}
@@ -275,8 +269,7 @@
                         {foreach $inc as $incs}
                             <tr>
                                 <td>{date( $_c['df'], strtotime($incs['date']))}</td>
-                                <!-- <td><a href="{$_url}transactions/manage/{$incs['id']}/">{$incs['description']}</a> </td> -->
-                                <td><a href="#">{$incs['description']}</a> </td>
+                                <td><a href="{$_url}transactions/manage/{$incs['id']}/">{$incs['description']}</a> </td>
                                 <td class="text-right amount">{$incs['amount']}</td>
                             </tr>
                         {/foreach}
@@ -304,8 +297,7 @@
                         {foreach $exp as $exps}
                             <tr>
                                 <td>{date( $_c['df'], strtotime($exps['date']))}</td>
-                                <!-- <td><a href="{$_url}transactions/manage/{$exps['id']}/">{$exps['description']}</a> </td> -->
-                                <td><a href="#">{$exps['description']}</a> </td>
+                                <td><a href="{$_url}transactions/manage/{$exps['id']}/">{$exps['description']}</a> </td>
                                 <td class="text-right amount">{$exps['amount']}</td>
                             </tr>
                         {/foreach}
