@@ -1,7 +1,7 @@
 <?php
 
 _auth();
-$ui->assign('_title', $_L['Utilities'].'- '. $config['CompanyName']);
+$ui->assign('_title', $_L['Utilities'].' - '. $config['CompanyName']);
 $ui->assign('_st', $_L['Utilities']);
 $ui->assign('_sysfrm_menu', 'util');
 $action = $routes['1'];
@@ -394,7 +394,7 @@ $ui->display('view-email.tpl');
        $html .= '<li>
                                 <div class="text-center link-block">
                                     <a href="'.U.'util/activity/">
-                                        <strong>'.$_L['See All Activity'].' </strong>
+                                        <strong>Ver todas las actividades</strong>
                                        <i class="fa fa-angle-right"></i>
                                     </a>
                                 </div>

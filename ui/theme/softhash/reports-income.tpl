@@ -12,16 +12,16 @@
 
 
                 <h4>{$_L['Income Summary']}</h4>
-                <hr>
-                <h5>{$_L['Total Income']}: {$_c['currency_code']}  {number_format($a,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
-                <h5>{$_L['Total Income This Month']}: {$_c['currency_code']} {number_format($m,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
-                <h5>{$_L['Total Income This Week']}: {$_c['currency_code']}  {number_format($w,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
-                <h5>{$_L['Total Income Last 30 days']}: {$_c['currency_code']} {number_format($m3,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
+                <br>
+                <p>{$_L['Total Income']}: {$_c['currency_code']}  {number_format($a,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
+                <p>{$_L['Total Income This Month']}: {$_c['currency_code']} {number_format($m,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
+                <p>{$_L['Total Income This Week']}: {$_c['currency_code']}  {number_format($w,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
+                <p>{$_L['Total Income Last 30 days']}: {$_c['currency_code']} {number_format($m3,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
 
 
-                <hr>
+                <br>
                 <h4>{$_L['Last 20 deposit Income']}</h4>
-                <hr>
+                <br>
                 <table class="table table-striped table-bordered">
                     <th>{$_L['Date']}</th>
                     <th>{$_L['Account']}</th>

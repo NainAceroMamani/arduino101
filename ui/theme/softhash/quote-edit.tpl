@@ -70,7 +70,7 @@
                                                class="control-label">Número de Presupuesto</label>
 
                                             <input type="text" class="form-control" id="cn" name="cn" value="{$d['cn']}">
-                                            <span class="help-block">Dejar en blanco para generar un número automaticamente</span>
+                                            <small class="help-block">Dejar en blanco para generar un número automaticamente</small>
                                     </div>
 
 

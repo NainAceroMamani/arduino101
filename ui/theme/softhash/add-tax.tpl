@@ -9,18 +9,18 @@
             </div>
             <div class="ibox-content">
 
-                <form role="form" name="accadd" method="post" action="{$_url}settings/add-tax-post/">
+                <form role="form" name="accadd" method="post" action="{$_url}settings/add-tax-post/" class="form-horizontal">
                     <div class="form-group">
-                        <label for="taxname">{$_L['Name']}</label>
+                        <label class="control-label" for="taxname">{$_L['Name']}</label>
                         <input type="text" class="form-control" id="taxname" name="taxname">
                     </div>
                     <div class="form-group">
-                        <label for="taxrate">{$_L['Rate']}</label>
+                        <label class="control-label" for="taxrate">{$_L['Rate']}</label>
                         <input type="text" class="form-control" id="taxrate" name="taxrate">
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> {$_L['Submit']}</button> | {$_L['Or']} <a href="{$_url}tax/list/"> {$_L['Back To The List']}</a>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> {$_L['Submit']}</button>
                 </form>
 
             </div>

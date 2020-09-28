@@ -21,7 +21,7 @@
                             <td>{$ds['fullname']}</td>
                             <td>{ib_lan_get_line($ds['user_type'])}</td>
                             <td>
-                                <a href="{$_url}settings/users-edit/{$ds['id']}" class="btn btn-warning"><i class="fa fa-pencil"></i> {$_L['Edit']}</a>
+                                <a href="{$_url}settings/users-edit/{$ds['id']}" class="btn"><i class="fa fa-pencil"></i></a>
                                 {if ($_user['username']) neq ($ds['username'])}
                                     <a href="{$_url}settings/users-delete/{$ds['id']}" id="{$ds['id']}" class="btn btn-danger cdelete"><i class="fa fa-trash"></i> {$_L['Delete']}</a>
                                 {/if}

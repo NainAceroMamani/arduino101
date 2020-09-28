@@ -116,7 +116,122 @@
                             </li>
     
                         {/if}
-                        <!--  -->
+                        {$admin_extra_nav[4]}
+                        {if $_c['accounting'] eq '1'}
+                            <li class="{if $_sysfrm_menu eq 'accounts'}active{/if}">
+                                <a href="#"><i class="fa fa-building-o"></i> <span class="nav-label">{$_L['Bank n Cash']}</span><span class="fa fa-angle-right"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="{$_url}accounts/add/">{$_L['New Account']}</a></li>
+    
+                                    <li><a href="{$_url}accounts/list/">{$_L['List Accounts']}</a></li>
+                                    <li><a href="{$_url}accounts/balances/">{$_L['Account_Balances']}</a></li>
+    
+                                </ul>
+                            </li>
+                        {/if}
+                        {if ($_c['invoicing'] eq '1') OR ($_c['quotes'] eq '1')}
+                        <li class="{if $_sysfrm_menu eq 'ps'}active{/if}">
+                            <a href="#"><i class="fa fa-cube"></i> <span class="nav-label">{$_L['Products n Services']}</span><span class="fa fa-angle-right"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="{$_url}ps/p-list/">{$_L['Products']}</a></li>
+                                <!-- <li><a href="{$_url}ps/p-new/">{$_L['New Product']}</a></li> -->
+                                <li><a href="{$_url}ps/s-list/">{$_L['Services']}</a></li>
+                                <!-- <li><a href="{$_url}ps/s-new/">{$_L['New Service']}</a></li> -->
+
+
+                            </ul>
+                        </li>
+                    {/if}
+                    {$admin_extra_nav[6]}
+    
+                    {if $_c['accounting'] eq '1'}
+
+                        <li class="{if $_sysfrm_menu eq 'reports'}active{/if}">
+                            <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">{$_L['Reports']} </span><span class="fa fa-angle-right"></span></a>
+                            <ul class="nav nav-second-level">
+
+
+                                <li><a href="{$_url}reports/statement/">{$_L['Account Statement']}</a></li>
+                                <li><a href="{$_url}reports/income/">{$_L['Income Reports']}</a></li>
+                                <li><a href="{$_url}reports/expense/">{$_L['Expense Reports']}</a></li>
+                                <li><a href="{$_url}reports/income-vs-expense/">Ingresos vs Gastos</a></li>
+                                <li><a href="{$_url}reports/by-date/">{$_L['Reports by Date']}</a></li>
+
+
+                                {foreach $sub_menu_admin['reports'] as $sm_report}
+
+                                    {$sm_report}
+
+
+                                {/foreach}
+
+
+                            </ul>
+                        </li>
+
+                    {/if}
+
+                    {if ($user['user_type']) eq 'Admin'}
+
+                        <li class="{if $_sysfrm_menu eq 'util'}active{/if}">
+                            <a href="#"><i class="icon-article"></i> <span class="nav-label">{$_L['Utilities']} </span><span class="fa fa-angle-right"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="{$_url}util/activity/">{$_L['Activity Log']}</a></li>
+                                <li><a href="{$_url}util/sent-emails/">{$_L['Email Message Log']}</a></li>
+                                <li><a href="{$_url}util/dbstatus/">{$_L['Database Status']}</a></li>
+                            </ul>
+                        </li>
+
+                    {/if}
+
+
+                    <li class="{if $_sysfrm_menu eq 'my_account'}active{/if}">
+                        <a href="#"><i class="icon-user-1"></i> <span class="nav-label">{$_L['My Account']} </span><span class="fa fa-angle-right"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li><a href="{$_url}settings/users-edit/{$user['id']}/">{$_L['Edit Profile']}</a></li>
+
+
+
+                        </ul>
+                    </li>
+                    {if ($user['user_type']) eq 'Admin'}
+                    <li class="{if $_sysfrm_menu eq 'settings'}active{/if}">
+                        <a href="#"><i class="icon-params"></i> <span class="nav-label">{$_L['Settings']} </span><span class="fa fa-angle-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <!-- <li><a href="{$_url}settings/app/">{$_L['General Settings']}</a></li> -->
+                            <!-- <li><a href="{$_url}settings/plugins/">{$_L['Plugins']}</a></li> -->
+                            <!-- <li><a href="{$_url}settings/localisation/">{$_L['Localisation']}</a></li> -->
+                            <li><a href="{$_url}settings/users/">{$_L['Manage Users']}</a></li>
+                            <!-- <li><a href="{$_url}settings/pg/">{$_L['Payment Gateways']}</a></li> -->
+
+                            {if $_c['accounting'] eq '1'}
+                                <!-- <li><a href="{$_url}settings/expense-categories/">{$_L['Expense Categories']}</a></li>
+                                <li><a href="{$_url}settings/income-categories/">{$_L['Income Categories']}</a></li> -->
+                                <!-- <li><a href="{$_url}settings/tags/">{$_L['Manage Tags']}</a></li> -->
+                                <!-- <li><a href="{$_url}settings/pmethods/">{$_L['Payment Methods']}</a></li> -->
+                                <li><a href="{$_url}tax/list/">{$_L['Sales Taxes']}</a></li>
+                            {/if}
+
+
+                            <li><a href="{$_url}settings/emls/">{$_L['Email Settings']}</a></li>
+                            <li><a href="{$_url}settings/email-templates/">{$_L['Email Templates']}</a></li>
+                            <!-- <li><a href="{$_url}settings/customfields/">{$_L['Custom Contact Fields']}</a></li> -->
+                            <!-- <li><a href="{$_url}settings/automation/">{$_L['Automation Settings']}</a></li> -->
+                            <!-- <li><a href="{$_url}settings/api/">{$_L['API Access']}</a></li> -->
+                            {foreach $sub_menu_admin['settings'] as $sm_settings}
+
+                                {$sm_settings}
+
+
+                            {/foreach}
+                            <!-- <li><a href="{$_url}settings/features/">{$_L['Choose Features']}</a></li> -->
+                            {*<li><a href="{$_url}settings/about/">{$_L['About']}</a></li>*}
+                        </ul>
+                    </li>
+                    {/if} 
+                                         
+                    <!--  -->
                     </ul>
     
                 </div>
@@ -161,6 +276,17 @@
                                         <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"/>
                                         <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
                                       </svg></a>
+                                      <div class="dropdown-backdrop"></div>
+                                      <ul class="dropdown-menu dropdown-alerts" id="activity_loaded">
+                                        <li id="activity_wait">
+                                            <div class="text-center link-block">
+                                                <a href="javascript:void(0)">
+
+
+                                                </a>
+                                            </div>
+                                        </li>
+                                  </ul>
                             </li>
                             <li class="dropdown navbar-user">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">

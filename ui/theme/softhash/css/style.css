@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en");
 
 body {
-    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #f0f2f4;
     font-size: 13px;
     color: #676a6c;
@@ -646,9 +646,21 @@ fieldset[disabled] .btn-success.active {
 
 }
 
+.btn-sm {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 768px){
+    .btn-sm {
+        width: 100%;
+        margin: 4px auto;
+    }
+}
+
 .btn-info {
     background-color: #15cd72;
-    border-color: #15cd72;
+    border: #15cd72;
     color: #FFFFFF;
 }
 
@@ -689,7 +701,7 @@ fieldset[disabled] .btn-info.active {
 
 .btn-default {
     background-color: #c2c2c2;
-    border-color: #c2c2c2;
+    border: #c2c2c2;
     color: #FFFFFF;
 }
 

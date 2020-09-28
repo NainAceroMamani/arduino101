@@ -14,18 +14,19 @@ $type = _post('stype');
 $name = _post('txtsearch');
         $d = ORM::for_table('sys_items')->where('type',$type)->where_like('name',"%$name%")->order_by_asc('name')->find_many();
 if($d){
-    echo '<table class="table table-hover">
+    echo '<table class="table table-hover table-bordered">
         <tbody>';
 
 
     foreach ($d as $ds){
         $price = number_format($ds['sales_price'],2,$config['dec_point'],$config['thousands_sep']);
         echo ' <tr>
+                <td>
+                    <small>'.$ds['item_number'].'</small>
+                </td>
 
                 <td class="project-title">
                     <a href="#" class="cedit"  id="t'.$ds['id'].'">'.$ds['name'].'</a>
-                    <br>
-                    <small>'.$ds['item_number'].'</small>
                 </td>
                 <td>
 
@@ -35,8 +36,8 @@ if($d){
 
                 <td class="project-actions">
 
-                    <a href="#" class="btn btn-primary btn-sm cedit" id="e'.$ds['id'].'"><i class="fa fa-pencil"></i> '.$_L['Edit'].' </a>
-                    <a href="#" class="btn btn-danger btn-sm cdelete" id="pid'.$ds['id'].'"><i class="fa fa-trash"></i> '.$_L['Delete'].' </a>
+                    <a href="#" class="btn cedit" id="e'.$ds['id'].'"><i class="fa fa-pencil"></i></a>
+                    <a href="#" class="btn cdelete" id="pid'.$ds['id'].'"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>';
     }

@@ -1,11 +1,10 @@
 {include file="sections/header.tpl"}
-<div class="row animated fadeInDown">
+<div class="row">
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>{$_L['Records']} {$paginator['found']}
-                    . {$_L['Page']} {$paginator['page']} {$_L['of']} {$paginator['lastpage']}. </h5>
-                <a href="#" class="btn btn-primary btn-sm pull-right" id="clear_logs"><i class="fa fa-list"></i> {$_L['Clear Old Data']}</a>
+                <h5>Lista de e-mails</h5>
+                <a href="#" class="btn btn-primary btn-sm pull-right" id="clear_logs"><i class="fa fa-trash"></i> {$_L['Clear Old Data']}</a>
 
 
 
@@ -31,14 +30,16 @@
                             <td>{date( $_c['df'], strtotime($ds['date']))}</td>
                             <td>{$ds['email']}</td>
                             <td>{$ds['subject']}</td>
-                            <td><a href="{$_url}util/view-email/{$ds['id']}/" class="btn btn-primary btn-outline btn-xs"><i class="fa fa-envelope-o"></i> {$_L['View']}</a></td>
+                            <td><a href="{$_url}util/view-email/{$ds['id']}/" class="btn"><i class="fa fa-envelope-o"></i></a></td>
 
                         </tr>
                     {/foreach}
                     </tbody>
                 </table>
-
-                {$paginator['contents']}
+                <div class="d-flex">
+                    {$paginator['contents']}
+                    <span>{$_L['Page']} {$paginator['page']} {$_L['of']} {$paginator['lastpage']}</span>                    
+                </div>
 
             </div>
 

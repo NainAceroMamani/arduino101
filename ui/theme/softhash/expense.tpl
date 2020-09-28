@@ -96,7 +96,7 @@
                             <label for="ref" class="control-label">{$_L['Ref']}#</label>
 
                                 <input type="text" class="form-control" id="ref" name="ref">
-                                <span class="help-block">{$_L['ref_example']}</span>
+                                <small class="help-block">{$_L['ref_example']}</small>
 
                         </div>
                     </div>

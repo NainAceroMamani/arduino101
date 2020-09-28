@@ -16,11 +16,11 @@
                     </h5>
                     <div class="ibox-tools">
                        {if $type eq 'Product'}
-                           <a href="{$_url}ps/p-list" class="btn btn-primary btn-xs">{$_L['List Products']}</a>
+                           <a href="{$_url}ps/p-list" class="btn btn-primary btn-xs">Lista de Productos</a>
 
                        {/if}
                         {if $type eq 'Service'}
-                            <a href="{$_url}ps/s-list" class="btn btn-primary btn-xs">{$_L['List Services']}</a>
+                            <a href="{$_url}ps/s-list" class="btn btn-primary btn-xs">Lista de Servicios</a>
                         {/if}
 
 
@@ -33,30 +33,29 @@
 
                     <form class="form-horizontal" id="rform">
 
-                        <div class="form-group"><label class="col-lg-2 control-label" for="name">{$_L['Name']}</label>
+                        <div class="form-group"><label class="control-label" for="name">{$_L['Name']}</label>
 
-                            <div class="col-lg-10"><input type="text" id="name" name="name" class="form-control" autocomplete="off">
+                            <input type="text" id="name" name="name" class="form-control" autocomplete="off">
 
-                            </div>
+
                         </div>
 
-                        <div class="form-group"><label class="col-lg-2 control-label" for="sales_price">{$_L['Sales Price']}</label>
+                        <div class="form-group"><label class="control-label" for="sales_price">{$_L['Sales Price']}</label>
 
-                            <div class="col-lg-10"><input type="text" id="sales_price" name="sales_price" class="form-control amount" autocomplete="off" data-a-sign="{$_c['currency_code']} "  data-a-dec="{$_c['dec_point']}" data-a-sep="{$_c['thousands_sep']}" data-d-group="2">
+                            <input type="text" id="sales_price" name="sales_price" class="form-control amount" autocomplete="off" data-a-sign="{$_c['currency_code']} "  data-a-dec="{$_c['dec_point']}" data-a-sep="{$_c['thousands_sep']}" data-d-group="2">
 
-                            </div>
                         </div>
-                        <div class="form-group"><label class="col-lg-2 control-label" for="item_number">{$_L['Item Number']}</label>
+                        <div class="form-group"><label class="control-label" for="item_number">{$_L['Item Number']}</label>
 
-                            <div class="col-lg-10"><input type="text" id="item_number" value="{$nxt}" name="item_number" class="form-control" autocomplete="off">
+                            <input type="text" id="item_number" value="{$nxt}" name="item_number" class="form-control" autocomplete="off">
 
-                            </div>
+                            
                         </div>
-                        <div class="form-group"><label class="col-lg-2 control-label" for="description">{$_L['Description']}</label>
+                        <div class="form-group"><label class="control-label" for="description">{$_L['Description']}</label>
 
-                            <div class="col-lg-10"><textarea id="description" class="form-control" rows="3"></textarea>
+                            <textarea id="description" class="form-control" rows="3"></textarea>
 
-                            </div>
+                            
                         </div>
 
 
@@ -65,9 +64,9 @@
 
 
                         <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
+                            <div >
 
-                                <button class="btn btn-sm btn-primary" type="submit" id="submit">{$_L['Submit']}</button>
+                                <button class="btn btn-primary" type="submit" id="submit">{$_L['Submit']}</button>
                             </div>
                         </div>
                     </form>

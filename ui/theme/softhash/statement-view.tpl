@@ -2,7 +2,8 @@
 <div class="row">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>{$account} {$_L['Statement']} [{date( $_c['df'], strtotime($fdate))} - {date( $_c['df'], strtotime($tdate))}]</h5>
+            <h5>Estado actual de {$account} </h5>
+            <h4>[{date( $_c['df'], strtotime($fdate))} - {date( $_c['df'], strtotime($tdate))}]</h4>
 
         </div>
         <div class="ibox-content">
@@ -34,8 +35,8 @@
 
 
             </table>
-            <div class="row">
-                <div class="col-md-8">
+            <div class="m-t-md row">
+                <div class="col-md-10">
                     &nbsp;
                 </div>
                 <div class="col-md-2" style="text-align: right"> <form class="form-horizontal" method="post" action="{$_url}export/printable" target="_blank">
@@ -43,15 +44,8 @@
                         <input type="hidden" name="tdate" value="{$tdate}">
                         <input type="hidden" name="stype" value="{$stype}">
                         <input type="hidden" name="account" value="{$account}">
-                        <button type="submit" class="btn btn-default btn-sm"><i class="fa fa-print"></i> {$_L['Export for Print']}</button>
+                        <button type="submit" class="btn btn-default"><i class="fa fa-print"></i> {$_L['Export for Print']}</button>
 
-                    </form></div>
-                <div class="col-md-2" style="text-align: right"> <form class="form-horizontal" method="post" action="{$_url}export/pdf">
-                        <input type="hidden" name="fdate" value="{$fdate}">
-                        <input type="hidden" name="tdate" value="{$tdate}">
-                        <input type="hidden" name="stype" value="{$stype}">
-                        <input type="hidden" name="account" value="{$account}">
-                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-file-pdf-o"></i> {$_L['Export to PDF']}</button>
                     </form></div>
             </div>
         </div>

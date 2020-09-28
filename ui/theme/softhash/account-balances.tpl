@@ -21,7 +21,7 @@
 
                     <tr>
                         <td><strong>{$_L['Total']}:</strong></td>
-                        <td class="text-right"><strong><span {if $tbal < 0}class="text-red"{/if}>{number_format($tbal,2,$_c['dec_point'],$_c['thousands_sep'])}</span></strong></td>
+                        <td class="text-right"><strong><span {if $tbal < 0}class="text-red"{/if}>{$_c['currency_code']} {number_format($tbal,2,$_c['dec_point'],$_c['thousands_sep'])}</span></strong></td>
                     </tr>
                 </table>
 

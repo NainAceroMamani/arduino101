@@ -13,12 +13,12 @@
 
                 <div id="dpx"></div>
 
-                <div id="result">
-                    <h4>{$_L['Total Income']}: {$_c['currency_code']} {number_format($cr,2,$_c['dec_point'],$_c['thousands_sep'])}</h4>
-                    <h4>{$_L['Total Expense']}: {$_c['currency_code']} {number_format($dr,2,$_c['dec_point'],$_c['thousands_sep'])}</h4>
+                <div id="result" class="m-t-xl">
+                    <p>{$_L['Total Income']}: {$_c['currency_code']} {number_format($cr,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
+                    <p>{$_L['Total Expense']}: {$_c['currency_code']} {number_format($dr,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
 
                     <hr>
-                    <h4>{$_L['All Transactions at Date']}: <span id="tdate">{date( $_c['df'], strtotime($mdate))}</span> </h4>
+                    <p>Todas las transacciones hasta <span id="tdate">{date( $_c['df'], strtotime($mdate))}</span> </p>
                     <hr>
                     <table class="table table-striped table-bordered">
 

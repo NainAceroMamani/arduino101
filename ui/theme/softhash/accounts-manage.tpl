@@ -18,13 +18,13 @@
                             <td>{$ds['account']}</td>
                             <td>{$ds['description']}</td>
                             <td>
-                                <a href="{$_url}accounts/edit/{$ds['id']}" class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> {$_L['Edit']}</a>
+                                <a href="{$_url}accounts/edit/{$ds['id']}" class="btn"><i class="fa fa-pencil"></i></a>
 
                                 {if $ds['ib_url'] neq ''}
-                                    <a href="{$ds['ib_url']}" target="_blank" class="btn btn-xs btn-primary"><i class="fa fa-globe"></i></a>
+                                    <a href="{$ds['ib_url']}" target="_blank" class="btn"><i class="fa fa-globe"></i></a>
                                 {/if}
 
-                                <a href="{$_url}accounts/delete/{$ds['id']}" id="did{$ds['id']}" class="cdelete btn btn-danger btn-xs"><i class="fa fa-trash"></i> {$_L['Delete']}</a>
+                                <a href="{$_url}accounts/delete/{$ds['id']}" id="did{$ds['id']}" class="cdelete btn"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     {/foreach}

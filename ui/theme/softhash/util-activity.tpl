@@ -1,10 +1,9 @@
 {include file="sections/header.tpl"}
-<div class="row animated fadeInDown">
+<div class="row">
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>{$_L['Records']} {$paginator['found']}
-                    . {$_L['Page']} {$paginator['page']} {$_L['of']} {$paginator['lastpage']}. </h5>
+                <h5>Actividades Realizadas</h5>
                 <a href="#" class="btn btn-primary btn-sm pull-right" id="clear_logs"><i
                             class="fa fa-list"></i> {$_L['Clear Old Data']}</a>
 
@@ -40,8 +39,10 @@
 
                     </tbody>
                 </table>
-
-                {$paginator['contents']}
+                <div class="d-flex">
+                    {$paginator['contents']}
+                    <span>{$_L['Page']} {$paginator['page']} {$_L['of']} {$paginator['lastpage']}</span>                    
+                </div>
 
             </div>
 

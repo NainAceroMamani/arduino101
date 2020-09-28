@@ -17,12 +17,11 @@ if($cr == ''){
     $cr = '0.00';
 }
 ?>
-<div class="panel-body" style="background: #ffffff; margin-top: 10px;">
-<h4><?php echo $_L['Total Income']; ?>: <?php echo $config['currency_code'] .' '. number_format($cr,2,$config['dec_point'],$config['thousands_sep']); ?></h4>
-<h4><?php echo $_L['Total Expense']; ?>:  <?php echo $config['currency_code'] .' '. number_format($dr,2,$config['dec_point'],$config['thousands_sep']); ?></h4>
+<p><?php echo $_L['Total Income']; ?>: <?php echo $config['currency_code'] .' '. number_format($cr,2,$config['dec_point'],$config['thousands_sep']); ?></p>
+<p><?php echo $_L['Total Expense']; ?>:  <?php echo $config['currency_code'] .' '. number_format($dr,2,$config['dec_point'],$config['thousands_sep']); ?></p>
 
 <hr>
-<h4><?php echo $_L['All Transactions at Date']; ?>:  <?php echo date( $config['df'], strtotime($mdate)); ?></h4>
+<p><?php echo $_L['All Transactions at Date']; ?>:  <?php echo date( $config['df'], strtotime($mdate)); ?></p>
 <hr>
 <table class="table table-striped table-bordered">
 

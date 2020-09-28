@@ -10,9 +10,11 @@
 
 .help-block {
     float: right;
+    text-align: right;
 }
 
 .dropdown-option {
+    font-weight: 600;
     font-size: 16px;
     padding: 15px 0;
     color: #444;
@@ -804,6 +806,11 @@
     margin-bottom: 20px;
 }
 
+.ibox-content h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .ibox-content.text-box {
     padding-bottom: 0px;
     padding-top: 15px;
@@ -850,6 +857,38 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.ibox-title.special {
+    height: unset;
+}
+
+.ibox-title.special .btn-dd {
+    float: left;
+}
+
+.ibox-title.special .btn-dd button {
+    float: left;
+    margin-right: -5px;
+}
+
+@media screen and (max-width: 768px){
+    .ibox-title.special {
+       flex-direction: column;
+    }
+    .ibox-title.special .btn-dd {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ibox-title.special .btn-dd {
+        float: none;
+    }
+    
+    .ibox-title.special .btn-dd button {
+        float: none;
+        margin-right: 0;
+    }
 }
 
 .ibox-content {
@@ -1136,18 +1175,15 @@ table.dataTable thead .sorting:after {
     margin-top: 30px;
 }
 
-.table td.text-right{
-    text-align: center;
-}
 
 #croppic {
     background-position: center center !important;
     background-size: 90% auto !important;
     border: 5px solid #eee !important;
     border-radius: 2px;
-    height: 350px !important;
-    margin: 50px 70px 20px;
-    width: 350px !important;
+    height: 300px !important;
+    margin: 10px 70px 10px !important;
+    width: 300px !important;
     box-shadow: none !important;
 }
 
@@ -1155,7 +1191,11 @@ table.dataTable thead .sorting:after {
     margin-left: 84px;
 }
 
-
+@media (max-width: 768px) {
+    #cropContainerHeaderButton {
+        margin-left: 0;
+    }
+}
 
 .sys_table > thead > tr > th, .sys_table > thead > tr > td {
     background: #FAFBFC;
@@ -1802,3 +1842,6 @@ button.toast-close-button {
 
 
 /* toastr End */
+.table > tbody > tr > .project-actions {
+    text-align: right;
+}

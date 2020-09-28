@@ -1,28 +1,15 @@
 $(document).ready(function () {
 
-       var pbar = $('#progressbar');
-    pbar.hide();
 
-    pbar.progressbar({
-        warningMarker: 100,
-        dangerMarker: 100,
-        maximum: 100,
-        step: 15
-    });
 
     function updateDiv(){
      //   $("#sysfrm_ajaxrender").html('Loading...');
-        $('#ibox_form').block({ message: null });
-        $('#progressbar').show();
+        // $('#ibox_form').unblock({ message: null });
 
-        var timer = setInterval(function () {
-            pbar.progressbar('stepIt');
-
-        }, 250);
+      
 
         var btnsearch = $("#search");
-        $('.progress').show();
-        $('.progress .progress-bar').progressbar();
+
         //btnsearch.html(_L['Searching']);
         //btnsearch.addClass("btn-danger");
         var _url = $("#_url").val();
@@ -33,18 +20,14 @@ $(document).ready(function () {
 
         })
             .done(function (data) {
-
-                setTimeout(function () {
-                    var sbutton = $("#search");
-                    var result =  $("#sysfrm_ajaxrender");
-                    //sbutton.html('Search');
-                    //sbutton.removeClass("btn-danger");
-                    $('.progress').hide();
-                    $('#ibox_form').unblock();
-                    result.html(data);
-                    result.show();
-
-                }, 2000);
+                var sbutton = $("#search");
+                var result =  $("#sysfrm_ajaxrender");
+                //sbutton.html('Search');
+                //sbutton.removeClass("btn-danger");
+                
+                // $('#ibox_form').unblock();
+                result.html(data);
+                result.show();
             });
 
     }
@@ -77,17 +60,17 @@ $(document).ready(function () {
 
        // var id = $(this).closest('tr').attr('id');
         // create the backdrop and wait for next modal to be triggered
-        $('body').modalmanager('loading');
+       
         var _url = $("#_url").val();
         setTimeout(function(){
             $modal.load(_url + 'ps/edit-form/' + id, '', function(){
                 $modal.modal();
             });
-        }, 1000);
+        }, 100);
     });
 
     $modal.on('click', '#update', function(){
-        $modal.modal('loading');
+        
         setTimeout(function(){
 
 
@@ -104,7 +87,7 @@ $(document).ready(function () {
                     else {
 
                         $modal
-                            .modal('loading')
+                            
                             .find('.modal-body')
                             .prepend('<div class="alert alert-danger fade in">' + data +
 

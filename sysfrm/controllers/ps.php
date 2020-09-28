@@ -2,7 +2,7 @@
 
 _auth();
 $ui->assign('_sysfrm_menu', 'ps');
-$ui->assign('_title', $_L['Products n Services'].'- '. $config['CompanyName']);
+$ui->assign('_title', $_L['Products n Services'].' - '. $config['CompanyName']);
 $ui->assign('_st', $_L['Products n Services']);
 $action = $routes['1'];
 $user = User::_info();
@@ -282,30 +282,24 @@ switch ($action) {
 
 <form class="form-horizontal" role="form" id="edit_form" method="post">
   <div class="form-group">
-    <label for="name" class="col-sm-2 control-label">'.$_L['Name'].'</label>
-    <div class="col-sm-10">
+    <label for="name" class="control-label">'.$_L['Name'].'</label>
       <input type="text" class="form-control" value="'.$d['name'].'" name="name" id="name">
-    </div>
   </div>
   <div class="form-group">
-    <label for="rate" class="col-sm-2 control-label">'.$_L['Item Number'].'</label>
-    <div class="col-sm-2">
+    <label for="rate" class="control-label">'.$_L['Item Number'].'</label>
       <input type="text" class="form-control" name="item_number" value="'.$d['item_number'].'" id="item_number">
       <input type="hidden" name="id" value="'.$d['id'].'">
-    </div>
   </div>
   <div class="form-group">
-    <label for="rate" class="col-sm-2 control-label">'.$_L['Price'].'</label>
-    <div class="col-sm-2">
+    <label for="rate" class="control-label">'.$_L['Price'].'</label>
       <input type="text" class="form-control" name="price" value="'.$price.'" id="price">
       <input type="hidden" name="id" value="'.$d['id'].'">
-    </div>
   </div>
     <div class="form-group">
-    <label for="name" class="col-sm-2 control-label">'.$_L['Description'].'</label>
-    <div class="col-sm-10">
+    <label for="name" class="control-label">'.$_L['Description'].'</label>
+
       <textarea id="description" name="description" class="form-control" rows="3">'.$d['description'].'</textarea>
-    </div>
+
   </div>
 </form>
 

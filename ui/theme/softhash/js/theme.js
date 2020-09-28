@@ -100,7 +100,7 @@ $(document).ready(function () {
 
                     $("#activity_loaded").html(data);
 
-                }, 2000);
+                }, 100);
             });
     });
 

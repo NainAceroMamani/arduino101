@@ -7,6 +7,12 @@
     line-height: 16px;
 }
 
+@media (max-width: 768px){
+    #ribbon-container {
+        top:225px
+    }
+}
+
 #ribbon-container a {
     display:block;
     padding:12px;

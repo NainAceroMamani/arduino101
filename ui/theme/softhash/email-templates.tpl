@@ -1,7 +1,7 @@
 {include file="sections/header.tpl"}
 <div class="row">
 
-    <div class="col-lg-12 animated fadeInRight">
+    <div class="col-lg-12">
         <div class="mail-box-header">
 
 
@@ -10,9 +10,9 @@
             </h2>
 
         </div>
-        <div class="mail-box" id="sysfrm_ajaxrender">
+        <div class="mail-box pr-md pl-md pb-md" id="sysfrm_ajaxrender">
 
-            <table class="table table-hover table-mail">
+            <table class="table table-hover table-mail table-bordered">
                 <tbody>
 
 

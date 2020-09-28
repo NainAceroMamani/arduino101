@@ -1,7 +1,7 @@
 <?php
 
 _auth();
-$ui->assign('_title', $_L['Reports'].'- '. $config['CompanyName']);
+$ui->assign('_title', $_L['Reports'].' - '. $config['CompanyName']);
 $ui->assign('_st', $_L['Reports']);
 $ui->assign('_sysfrm_menu', 'reports');
 $action = $routes['1'];
@@ -136,7 +136,6 @@ $(\'#dp1\').datepicker({
    $(\'#dpx\').on(\'selectedDateChanged\', function(event, date) {
   // Your logic goes here
  // alert(date);
- $( "#result" ).html( "<h3>'.$_L['Loading'].'.....</h3>" );
  // $(\'#tdate\').text(moment(date).format("dddd, '.$mdf.'"));
  $.get( "'.U.'ajax.date-summary/" + date, function( data ) {
      $( "#result" ).html( data );

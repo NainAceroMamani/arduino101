@@ -3,7 +3,7 @@
     <div class="ibox-title">
         <h5>{$_L['Total Database Size']}: {$dbsize}  MB </h5>
         <div class="ibox-tools">
-            <a href="{$_url}util/dbbackup/" class="btn btn-primary btn-xs"><i class="fa fa-download"></i> {$_L['Download Database Backup']}</a>
+            <a href="{$_url}util/dbbackup/" class="btn btn-primary btn-xs"><i class="fa fa-download"></i>Descargar Copia de Seguridad</a>
         </div>
     </div>
     <div class="ibox-content">

@@ -62,7 +62,7 @@
                                                class="control-label">Numero de Factura</label>
 
                                             <input type="text" class="form-control" id="cn" name="cn">
-                                            <span class="help-block">Dejar en blanco para generar un numero</span>
+                                            <small class="help-block">Dejar en blanco para generar un numero</small>
                                     </div>
 
                                 </div>

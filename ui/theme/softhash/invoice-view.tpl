@@ -8,7 +8,7 @@
     </div>
     <div class="col-lg-12"  id="sysfrm_ajaxrender">
         <div class="ibox float-e-margins">
-            <div class="ibox-title">
+            <div class="ibox-title special">
                 <h5>{$_L['Invoice']} - {$d['invoicenum']}{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if} </h5>
                 <input type="hidden" name="iid" value="{$d['id']}" id="iid">
 
@@ -16,40 +16,42 @@
                 <div class="btn-group  pull-right" role="group" aria-label="...">
 
 
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn  btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-envelope-o"></i>  {$_L['Send Email']}
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#" id="mail_invoice_created">{$_L['Invoice Created']}</a></li>
-                            <li><a href="#" id="mail_invoice_reminder">{$_L['Invoice Payment Reminder']}</a></li>
-                            <li><a href="#" id="mail_invoice_overdue">{$_L['Invoice Overdue Notice']}</a></li>
-                            <li><a href="#" id="mail_invoice_confirm">{$_L['Invoice Payment Confirmation']}</a></li>
-                            <li><a href="#" id="mail_invoice_refund">{$_L['Invoice Refund Confirmation']}</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn  btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-ellipsis-v"></i>  {$_L['Mark As']}
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            {if $d['status'] neq 'Paid'}
-                                <li><a href="#" id="mark_paid">{$_L['Paid']}</a></li>
-                            {/if}
-                            {if $d['status'] neq 'Unpaid'}
-                                <li><a href="#" id="mark_unpaid">{$_L['Unpaid']}</a></li>
-                            {/if}
-                            {if $d['status'] neq 'Partially Paid'}
-                                <li><a href="#" id="mark_partially_paid">{$_L['Partially Paid']}</a></li>
-                            {/if}
-                            {if $d['status'] neq 'Cancelled'}
-                                <li><a href="#" id="mark_cancelled">{$_L['Cancelled']}</a></li>
-                            {/if}
-
-                        </ul>
+                    <div class="btn-dd">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn  btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-envelope-o"></i>  {$_L['Send Email']}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#" id="mail_invoice_created">{$_L['Invoice Created']}</a></li>
+                                <li><a href="#" id="mail_invoice_reminder">{$_L['Invoice Payment Reminder']}</a></li>
+                                <li><a href="#" id="mail_invoice_overdue">{$_L['Invoice Overdue Notice']}</a></li>
+                                <li><a href="#" id="mail_invoice_confirm">{$_L['Invoice Payment Confirmation']}</a></li>
+                                <li><a href="#" id="mail_invoice_refund">{$_L['Invoice Refund Confirmation']}</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn  btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-ellipsis-v"></i>  {$_L['Mark As']}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                {if $d['status'] neq 'Paid'}
+                                    <li><a href="#" id="mark_paid">{$_L['Paid']}</a></li>
+                                {/if}
+                                {if $d['status'] neq 'Unpaid'}
+                                    <li><a href="#" id="mark_unpaid">{$_L['Unpaid']}</a></li>
+                                {/if}
+                                {if $d['status'] neq 'Partially Paid'}
+                                    <li><a href="#" id="mark_partially_paid">{$_L['Partially Paid']}</a></li>
+                                {/if}
+                                {if $d['status'] neq 'Cancelled'}
+                                    <li><a href="#" id="mark_cancelled">{$_L['Cancelled']}</a></li>
+                                {/if}
+    
+                            </ul>
+                        </div>
                     </div>
 
                     {if $_c['accounting'] eq '1'}

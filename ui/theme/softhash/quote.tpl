@@ -8,7 +8,7 @@
     </div>
     <div class="col-lg-12"  id="sysfrm_ajaxrender">
         <div class="ibox float-e-margins" id="ibox">
-            <div class="ibox-title">
+            <div class="ibox-title special">
                 <h5>{$_L['Quote']} - N°{if $d['cn'] neq ''} {$d['cn']} {else} {$d['id']} {/if}</h5>
 
                 <input type="hidden" name="iid" value="{$d['id']}" id="iid">

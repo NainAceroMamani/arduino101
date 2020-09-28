@@ -9,16 +9,16 @@
             <div class="ibox-content">
 
                 <h4>{$_L['Expense Summary']}</h4>
-                <hr>
-                <h5>{$_L['Total Expense']}: {$_c['currency_code']} {number_format($a,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
-                <h5>{$_L['Total Expense This Month']}: {$_c['currency_code']} {number_format($m,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
-                <h5>{$_L['Total Expense This Week']}: {$_c['currency_code']} {number_format($w,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
-                <h5>{$_L['Total Expense Last 30 days']}: {$_c['currency_code']} {number_format($m3,2,$_c['dec_point'],$_c['thousands_sep'])}</h5>
+                <br>
+                <p>{$_L['Total Expense']}: {$_c['currency_code']} {number_format($a,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
+                <p>{$_L['Total Expense This Month']}: {$_c['currency_code']} {number_format($m,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
+                <p>{$_L['Total Expense This Week']}: {$_c['currency_code']} {number_format($w,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
+                <p>{$_L['Total Expense Last 30 days']}: {$_c['currency_code']} {number_format($m3,2,$_c['dec_point'],$_c['thousands_sep'])}</p>
 
 
-                <hr>
+                <br>
                 <h4>{$_L['Last 20 deposit Expense']}</h4>
-                <hr>
+                <br>
                 <table class="table table-striped table-bordered">
                     <th>{$_L['Date']}</th>
                     <th>{$_L['Account']}</th>

@@ -31,7 +31,7 @@ switch($do){
                         $d->save();
                         //login log
 
-                        _log($_L['Login Successful'].' '.$username,'Admin',$d['id']);
+                        // _log($_L['Login Successful'].' '.$username,'Admin',$d['id']);
                        // setcookie("tplsub", 'material', time()+15552000);
                         if(!isset($config['build']) OR ($config['build'] < $file_build)){
                             r2(U.'update/');
