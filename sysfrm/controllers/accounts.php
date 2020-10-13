@@ -116,7 +116,7 @@ switch ($action) {
             $d->contact_phone = _post('contact_phone');
             $d->website = '';
             $d->ib_url = $ib_url;
-            $d->created = '';
+            $d->created = date("Y-m-d");
             $d->notes = '';
             $d->sorder = 1;
             $d->e = '';
