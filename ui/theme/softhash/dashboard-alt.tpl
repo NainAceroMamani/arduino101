@@ -70,12 +70,12 @@
     <div class="col-lg-3">
         <div class="widget style1 lazur-bg info-tile info-tile-alt tile-teal">
             <div class="row">
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <span> {$_L['Income Today']} </span>
                     {*<h3 class="font-bold">{$_c['currency_code']} {number_format($ti,2,$_c['dec_point'],$_c['thousands_sep'])}</h3>*}
                     <h3 class="font-bold amount">{$ti}</h3>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <i class="fa fa-money fa-2x text-success"></i>
                 </div>
             </div>
@@ -85,12 +85,12 @@
     <div class="col-lg-3">
         <div class="widget style1 red-bg info-tile info-tile-alt tile-danger">
             <div class="row">
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <span> {$_L['Expense Today']} </span>
                     {*<h3 class="font-bold">{$_c['currency_code']} {number_format($te,2,$_c['dec_point'],$_c['thousands_sep'])}</h3>*}
                     <h3 class="font-bold amount">{$te}</h3>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <i class="fa fa-database fa-5x text-danger"></i>
                 </div>
             </div>
@@ -99,12 +99,12 @@
     <div class="col-lg-3">
         <div class="widget style1 lazur-bg info-tile info-tile-alt tile-success">
             <div class="row">
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <span> {$_L['Income This Month']} </span>
                     {*<h3 class="font-bold">{$_c['currency_code']} {number_format($mi,2,$_c['dec_point'],$_c['thousands_sep'])}</h3>*}
                     <h3 class="font-bold amount">{$mi}</h3>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <i class="fa fa-briefcase fa-5x text-success"></i>
                 </div>
             </div>
@@ -113,11 +113,11 @@
     <div class="col-lg-3">
         <div class="widget style1 red-bg info-tile info-tile-alt tile-blue">
             <div class="row">
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <span> {$_L['Expense This Month']} </span>
                     <h3 class="font-bold amount">{$me}</h3>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <i class="fa fa-cube fa-5x text-danger"></i>
                 </div>
             </div>
